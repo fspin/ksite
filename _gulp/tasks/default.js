@@ -8,7 +8,7 @@ var gulp = require('gulp'),
 
 // task
 gulp.task('default', [
-    'dependencies',
+    // 'dependencies',
     'test',
     'symbols',
     'scss',
