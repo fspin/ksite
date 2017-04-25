@@ -5,13 +5,13 @@
 
 // plugins
 var gulp = require('gulp'),
-    uglyfly = require('gulp-uglyfly');
+    uglify = require('gulp-uglify');
 
 var config = require('../config').compressjs;
 
 // task
 gulp.task('compressjs', function() {
     gulp.src(config.src)
-        .pipe(uglyfly())
+        .pipe(uglify())
         .pipe(gulp.dest(config.dest));
 });
