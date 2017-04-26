@@ -6,8 +6,6 @@
 
 /**
  *  1. Needs to be the width of the logo you are using.
- *  2. Logo is set as background-image.
- *     Text-indent is set to prevent text from showing on top of the background-image.
  */
 
 .c-logo {
@@ -18,7 +16,7 @@
     background-repeat: no-repeat;
     background-position: center left;
     background-image: url('../img/svg/logo.svg');
-    // text-indent: -99999px; /* [2] */
+
     font-family: $beta-font-family;
     letter-spacing: -.05rem;
     @include padding-left(4.5);
