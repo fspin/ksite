@@ -13,13 +13,14 @@
 .c-logo {
     float: left;
     display: block;
-    width: 157px; /* [1] */
+    width: 300px; /* [1] */
     margin-bottom: 0;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center left;
     background-image: url('../img/svg/logo.svg');
-    text-indent: -99999px; /* [2] */
+    // text-indent: -99999px; /* [2] */
     @include text-dimensions($alpha-font-size,1,0,1.25,1.25);
+    @include padding-left(4.5);
 }
 
     .c-logo__link {

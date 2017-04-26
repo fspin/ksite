@@ -6,9 +6,10 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Meta data
-title: 'Chopstick'
+title: 'Kenta Takeshige'
 author: ''
-description: 'Chopstick is a framework based on the ITCSS architecture and a series of principles. It creates a structure to easily set-up and build bespoke web projects.'
+description: 'Eastern and Western Woodworking'
+description-2nd: 'Restoration'
 
 # Site navigation
 navigation:
