@@ -1,6 +1,6 @@
 {% if page.section != 'home' %}
+<a href="/" class="c-logo__link">
     <p class="c-logo">
-        <a href="index.html" class="c-logo__link">
 {% else %}
     <h1 class="c-logo">
 {% endif %}
@@ -8,8 +8,8 @@
     {{ site.title }}
 
 {% if page.section != 'home' %}
-        </a>
     </p>
+</a>
 {% else %}
     </h1>
 {% endif %}

@@ -4,12 +4,12 @@
     Hacks and quick fixes
 */
 .c-header {
-    background-color: palette(color-background);
+    background-color: palette(color-background,x-light);
     @include padding-lr(1,1);
-    @include padding-tb(.5,.5);
+    // @include padding-tb(.5,.5);
 
     @include mq(bp3) {
         @include padding-lr(2,2);
-        @include padding-tb(1,1);
+        // @include padding-tb(1,1);
     }
 }

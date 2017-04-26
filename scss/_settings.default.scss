@@ -44,8 +44,9 @@
 // Base colors
 $color-neutral                      : #aaa !default;
 
-$color-alpha                        : #0074D9 !default;
-$color-beta                         : #2ECC40 !default;
+$color-alpha                        : rgb(193, 39, 45) !default;
+$color-beta                         : rgb(70, 88, 123) !default;
+$color-gamma                        : rgb(123, 104, 82) !default;
 
 $color-error                        : #FF4136 !default;
 $color-success                      : #2ECC40 !default;
@@ -57,8 +58,8 @@ $color-background                   : rgb(247, 243, 240) !default;
 // Palettes
 $palettes: (
     color-background: (
-        x-light                     : hsl(hue($color-background),0,100),
-        light                       : hsl(hue($color-background),0,90),
+        x-light                     : rgb(254, 254, 254),
+        light                       : rgb(252, 251, 250),
         base                        : $color-background,
         dark                        : hsl(hue($color-background),0,30),
         x-dark                      : hsl(hue($color-background),0,10)
@@ -79,8 +80,14 @@ $palettes: (
     color-beta: (
         light                       : hsl(hue($color-beta),70,60),
         base                        : $color-beta,
-        dark                        : hsl(hue($color-beta),100,25),
+        dark                        : rgb(51, 55, 69),
         x-dark                      : hsl(hue($color-beta),100,15)
+    ),
+    color-gamma: (
+        light                       : hsl(hue($color-gamma),70,60),
+        base                        : $color-gamma,
+        dark                        : rgb(56, 55, 54),
+        x-dark                      : hsl(hue($color-gamma),100,15)
     ),
     color-error: (
         light                       : hsl(hue($color-error),70,60),
@@ -129,8 +136,8 @@ $ms13                               : 100 !default;
 // Font settings
 // ---
 
-$alpha-font-family                  : sans-serif !default;
-$beta-font-family                   : serif !default;
+$alpha-font-family                  : 'Marcellus', serif !default;
+$beta-font-family                   : 'Junge', serif !default;
 
 $alpha-font-size                    : $ms0 !default;
 

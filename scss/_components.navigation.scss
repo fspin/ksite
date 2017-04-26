@@ -6,9 +6,10 @@
 
 .c-nav-main {
     width: 100%;
-    float: left;
+    // float: left;
     display: none;
-    font-family: $alpha-font-family;
+    font-family: $beta-font-family;
+    text-transform: lowercase;
 
     @include mq(bp3) {
         display: block;
@@ -40,25 +41,37 @@
 
             & + & {
                 border-top: 0;
-                @include margin-lr(2,0);
+                // @include margin-lr(2,0);
             }
         }
     }
 
     .c-nav-main__link {
         display: block;
-        color: palette(color-alpha);
+        color: palette(color-gamma);
         text-decoration: none;
         font-weight: $beta-font-weight;
         @include text-dimensions($alpha-font-size,1,0,.25,.25);
 
         @include mq(bp3) {
-            @include padding-tb(1.25,1.25);
+            @include padding-tb(1.75,1.75);
+            @include padding-lr(1,1);
+        }
+
+        &:visited {
+            color: palette(color-gamma);
         }
 
         &:hover,
+        &:active {
+            text-decoration: none;
+            color: palette(color-beta,dark);
+            background-color: palette(color-background,light);
+        }
+
         .is-selected & {
-            color: palette(color-alpha,dark);
+            color: palette(color-alpha);
+            background-color: palette(color-background,light);
         }
     }
 
