@@ -11,6 +11,10 @@
 
 .c-row--zero {
     @include padding-tb(0,0);
+
+    @include mq(bp3) {
+        overflow-x: hidden;
+    }
 }
 
 .c-row--alpha {

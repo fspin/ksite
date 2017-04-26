@@ -18,7 +18,14 @@
 
 .c-card--alpha {
     color: palette(color-neutral,dark);
-    background-color: palette(color-neutral,light);
-    border: $border-width $border-style palette(color-neutral,base);
-    border-radius: $radius;
+    background-color: palette(color-neutral,x-light);
+    border: 0;
+}
+
+.c-card--img {
+    margin-bottom: 0;
+
+    @include mq(bp3, max) {
+        @include padding-lr(0);
+    }
 }
