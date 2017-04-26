@@ -16,6 +16,8 @@ navigation:
     url: styleguide/
   - title: grid
     url: grid/
+  - title: works
+    url: portfolio-pagina/
 
 # Jekyll settings
 permalink: pretty

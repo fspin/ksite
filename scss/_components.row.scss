@@ -9,6 +9,10 @@
     @include padding-lr($columns-gutter,$columns-gutter);
 }
 
+.c-row--zero {
+    @include padding-tb(0,0);
+}
+
 .c-row--alpha {
     background-color: palette(color-neutral,x-light);
 }
