@@ -24,6 +24,7 @@
     flex-wrap: wrap;
     // justify-content: space-around;
     align-items: stretch;
+    margin-bottom: -12rem;
 }
 
 .c-thumbnails__wrapper {
@@ -33,9 +34,10 @@
     // max-height: 150px;
     width: 31%;
 
-    &:not(:nth-child(3n)) {
-        margin-right: 1rem;
-    }
+    // &:not(:nth-child(3n)) {
+    //     margin-right: 1rem;
+    // }
+    margin-right: 2%;
 
     img {
         background: #fff;
