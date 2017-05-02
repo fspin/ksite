@@ -13,3 +13,33 @@
         // @include padding-tb(1,1);
     }
 }
+
+.c-title {
+    color: palette(color-beta, dark);
+}
+
+.c-thumbnails {
+    // width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    // justify-content: space-around;
+    align-items: stretch;
+}
+
+.c-thumbnails__wrapper {
+    // border: 1px solid black;
+    display: flex;
+    // height: auto;
+    // max-height: 150px;
+    width: 31%;
+
+    &:not(:nth-child(3n)) {
+        margin-right: 1rem;
+    }
+
+    img {
+        background: #fff;
+        padding: .5rem;
+        margin-bottom: 1rem;
+    }
+}
