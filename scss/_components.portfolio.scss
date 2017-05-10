@@ -2,7 +2,11 @@
     background-color: palette(color-background);
 
     @include mq(bp3) {
-        @include padding-tb(6,16);
+        @include padding-tb(6,2);
+
+        & + & {
+            @include padding-tb(4,2);
+        }
     }
 
     & + & {

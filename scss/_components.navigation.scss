@@ -50,7 +50,7 @@
         display: block;
         color: palette(color-gamma);
         text-decoration: none;
-        font-weight: $beta-font-weight;
+        font-weight: $alpha-font-weight;
         @include text-dimensions($alpha-font-size,1,0,.25,.25);
 
         @include mq(bp3) {
