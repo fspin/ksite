@@ -81,12 +81,14 @@
 
 
     .c-portfolio__img-right {
-        @include mq(bp3, max) {
-            @include padding-lr(0,0);
-            margin: 0;
+        order: 2;
 
+        @include mq(bp3, max) {
+            margin: 0;
             width: 100%;
             order: 1;
+
+            @include padding-lr(0,0);
         }
 
         @include mq(bp3) {
@@ -121,6 +123,8 @@
     }
 
     .c-portfolio__text-left {
+        order: 1;
+
         @include mq(bp3, max) {
             @include padding-lr(0,0);
 

@@ -88,6 +88,23 @@ module.exports = {
         dest: path + 'img/svg', // Destination of main SVG
         prefix: 'c-symbol-', // SVG symbols ID prefix e.g. `c-symbol-right`
         class: 'c-symbolset' // Main SVG import classname
+    },
+
+    image: {
+        src: path + 'original_img/**',
+        dest: path + 'img/',
+        imageConfig: {
+            pngquant: true,
+            optipng: false,
+            zopflipng: false,
+            jpegRecompress: true,
+            jpegoptim: true,
+            mozjpeg: true,
+            guetzli: false,
+            gifsicle: true,
+            svgo: false,
+            concurrent: 10
+        }
     }
 
 };
