@@ -1,4 +1,4 @@
-.c-portfolio {
+.c-work {
     background-color: palette(color-background);
     position: relative;
 
@@ -24,7 +24,7 @@
     }
 }
 
-    .c-portfolio__img-left {
+    .c-work__img-left {
 
         @include mq(bp3, max) {
             @include padding-lr(0,0);
@@ -57,7 +57,7 @@
         }
     }
 
-    .c-portfolio__text-right {
+    .c-work__text-right {
         @include mq(bp3, max) {
             @include padding-lr(0,0);
 
@@ -88,7 +88,7 @@
 
 
 
-    .c-portfolio__img-right {
+    .c-work__img-right {
         order: 2;
 
         @include mq(bp3, max) {
@@ -130,7 +130,7 @@
         // }
     }
 
-    .c-portfolio__text-left {
+    .c-work__text-left {
         order: 1;
 
         @include mq(bp3, max) {
