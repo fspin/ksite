@@ -1,5 +1,6 @@
 .c-portfolio {
     background-color: palette(color-background);
+    position: relative;
 
     @include mq(bp3) {
         @include padding-tb(6,2);
@@ -9,10 +10,17 @@
         }
     }
 
-    & + & {
-        @include mq(bp3, max) {
-            border-top: 1px dashed  palette(color-neutral);
-        }
+    & + &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 60%;
+
+        // @include mq(bp3, max) {
+        border-top: 1px dashed  palette(color-background, dark);
+        // }
     }
 }
 

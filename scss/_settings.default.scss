@@ -61,7 +61,7 @@ $palettes: (
         x-light                     : rgb(254, 254, 254),
         light                       : rgb(252, 251, 250),
         base                        : $color-background,
-        dark                        : hsl(hue($color-background),0,30),
+        dark                        : hsl(hue($color-background),20,85),
         x-dark                      : hsl(hue($color-background),0,10)
     ),
     color-neutral: (
@@ -84,7 +84,7 @@ $palettes: (
         x-dark                      : hsl(hue($color-beta),100,15)
     ),
     color-gamma: (
-        light                       : hsl(hue($color-gamma),70,60),
+        light                       : hsl(hue($color-gamma),50,75),
         base                        : $color-gamma,
         dark                        : rgb(56, 55, 54),
         x-dark                      : hsl(hue($color-gamma),100,15)
@@ -145,6 +145,7 @@ $alpha-font-weight                  : 400 !default;
 $beta-font-weight                   : 700 !default;
 
 $alpha-line-height                  : 1.5 !default;
+$beta-line-height                   : 1.25 !default;
 
 $alpha-leading                      : 1 !default;
 $beta-leading                       : 2 !default;
