@@ -1,0 +1,33 @@
+---
+layout: default
+title: Works
+sub-page: Restoration
+section: portfolio
+---
+{% assign restoration = site.data.works.restoration | reverse %}
+
+{% comment %}
+{% for work in restoration %}
+    <p>{{ work.title }} - {{ work.year }}</p>
+{% endfor %}
+{% endcomment %}
+<main class="c-row c-row--zero">
+    <div class="o-container">
+
+        {% for work in restoration limit:9 %}
+        {% capture thecycle %}{% cycle 'odd', 'even' %}{% endcapture %}
+
+            {%
+               include components.works.html
+
+               title=work.title
+               material=work.material
+               year=work.year
+               paragraphs=work.paragraphs
+               images=work.images
+            %}
+        {% endfor %}
+
+
+    </div>
+</main>

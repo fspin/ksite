@@ -11,24 +11,34 @@
 .c-logo {
     float: left;
     display: block;
-    width: auto; /* [1] */
     margin-bottom: 0;
     background-repeat: no-repeat;
-    background-position: center left;
+
     background-image: url('../img/svg/logo.svg');
 
     font-family: $beta-font-family;
     letter-spacing: -.05rem;
-    @include padding-left(4.5);
+    text-indent: -99999px;
+    width: 100%;
+    background-position: center;
 
-    @include text-dimensions($h3-font-size,1,0,1.25,1.25);
+    @include padding-left(4.5);
+    @include text-dimensions($h3-font-size,1,0,1.75,.75);
+
+    @include mq(bp1) {
+        width: auto; /* [1] */
+        background-position: center left;
+        text-indent: 0;
+
+        @include padding-bottom(1.75);
+    }
 
     @include mq(bp2) {
-        @include text-dimensions($h2-font-size,1,0,1.25,1.25);
+        @include text-dimensions($h2-font-size,1,0,1.75,1.75);
     }
 
     @include mq(bp4) {
-        @include text-dimensions($h1-font-size,1,0,1.25,1.25);
+        @include text-dimensions($h1-font-size,1,0,1.75,1.75);
     }
 
 
@@ -37,7 +47,13 @@
     .c-logo__link {
         display: block;
         color: palette(color-beta, dark);
-        // text-decoration: none;
+
+        width: 100vw;
+        max-width: 100%;
+
+        @include mq(bp1) {
+            width: auto;
+        }
 
         &:hover,
         &:active,

@@ -11,6 +11,11 @@
 
 .c-row--zero {
     @include padding-tb(0,0);
+    @include padding-lr(0,0);
+
+    @include mq(bp1) {
+        @include padding-lr($columns-gutter,$columns-gutter);
+    }
 
     @include mq(bp3) {
         overflow-x: hidden;
