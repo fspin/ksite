@@ -18,7 +18,12 @@ navigation:
   - title: grid
     url: grid/
   - title: works
-    url: portfolio-pagina/
+    url: works/
+    subpaginas:
+      - subtitle: creation
+        suburl: works-creation/
+      - subtitle: restoration
+        suburl: works-restoration/
 
 # Jekyll settings
 permalink: pretty
