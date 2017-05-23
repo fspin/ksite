@@ -13,10 +13,8 @@ description-2nd: 'Restoration'
 
 # Site navigation
 navigation:
-  - title: styleguide
-    url: styleguide/
-  - title: grid
-    url: grid/
+  - title: about
+    url: about/
   - title: works
     url: works/
     subpaginas:
@@ -24,6 +22,10 @@ navigation:
         suburl: works-creation/
       - subtitle: restoration
         suburl: works-restoration/
+  - title: workshop
+    url: workshop/
+  - title: contact
+    url: contact/
 
 # Jekyll settings
 permalink: pretty
