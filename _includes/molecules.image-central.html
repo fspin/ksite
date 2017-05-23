@@ -5,7 +5,7 @@
 {% endcomment %}
 
 <!-- <div class="c-test"> -->
-    <div class="c-thumbnail__wrapper u-centered-image">
+    <div class="c-thumbnail__wrapper u-centered-image{% if page.section == 'home' %} c-home--image{% endif %}">
         <div class="c-thumbnail__img" style="background-image: url('../img/jpg/{{ include.image }}');" role="img" aria-label="{{ page.title }}" title="{{ page.title }}">
         </div>
     </div>

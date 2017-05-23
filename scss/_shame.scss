@@ -32,17 +32,21 @@ Hacks and quick fixes
 }
 
 
+
+
 .c-wrapper {
     height: auto;
     min-height: 100%;
 }
 
-    .c-content__body {
-
+    .c-content__body,
+    .u-bg-main-color {
         background-color: palette(color-background);
-
     }
 
+    .c-content__body {
+        position: relative;
+    }
 
 
 .c-card__title {
@@ -88,10 +92,25 @@ Hacks and quick fixes
     &.u-centered-image {
         min-width: 300px;
         width: 80%;
+        max-width: 1200px;
         margin-top: 1rem;
         margin-bottom: 1rem;
+        padding-bottom: 45%;
+    }
+
+    &.c-home--image {
+        height: 95%;
+        width: 95%;
+        padding-bottom: 0;
     }
 }
+
+    .c-title {
+        position: absolute;
+        right: 7.5rem;
+        z-index: 10;
+        color: #fff;
+    }
 
 .c-thumbnail__img {
     position: absolute;
