@@ -1,13 +1,15 @@
 <nav class="c-nav-main js-nav">
     <ul class="o-list c-nav-main__list">
         <!-- Manually define homepage link -->
+        {% comment %}
         <li class="c-nav-main__item{% if page.section == "home" %} is-selected{% endif %}">
             <a href="{{ site.github.url }}/" class="c-nav-main__link">Home</a>
         </li>
+        {% endcomment %}
 
         <!-- Define your site navigation in _config.yml -->
         {% for item in site.navigation %}
-        <li class="c-nav-main__item{% if page.url contains item.url %} is-selected{% endif %}">
+        <li class="c-nav-main__item{% if page.url contains item.title %} is-selected{% endif %}">
             <a href="{{ site.github.url }}/{{ item.url }}" class="c-nav-main__link">
                 {{ item.title | capitalize }}
             </a>
@@ -16,11 +18,13 @@
     </ul>
 
     {% for item in site.navigation %}
-        {% if item.subpaginas != null and page.url contains item.url %}
+
+        {% if item.subpaginas != null and page.url contains item.title %}
+        <!-- {{ item.subpaginas }} -->
         <div class="c-nav-subnav">
             <ul class="o-list c-nav-main__list c-nav-sub__list">
                 {% for subitem in item.subpaginas %}
-                    <li class="c-nav-main__item c-nav-sub__item">
+                    <li class="c-nav-main__item c-nav-sub__item {% if page.url contains subitem.suburl %} is-selected{% endif %}">
                         <a href="{{ site.github.url}}/{{ subitem.suburl }}" class="c-nav-main__link c-nav-sub__link">
                             {{ subitem.subtitle | capitalize }}
                         </a>
