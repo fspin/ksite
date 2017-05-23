@@ -1,4 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" class="c-symbolset">
+    <symbol id="c-symbol-close" viewBox="0 0 44 44">
+      <title>hamburger</title><path d="M31.546 35.08L8.919 12.455l3.535-3.535 22.627 22.627z"/><path d="M35.082 12.454L12.455 35.081 8.92 31.546 31.547 8.919z"/>
+    </symbol>
     <symbol id="c-symbol-hamburger" viewBox="0 0 44 44">
       <title>hamburger</title><path d="M6 5h32v5H6V5zm0 15h32v5H6v-5zm0 14h32v5H6v-5z" fill-rule="evenodd"/>
     </symbol>
