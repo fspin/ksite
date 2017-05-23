@@ -30,6 +30,10 @@
     }
 }
 
+    .c-nav-main--home {
+        // background-color: palette(color-background);
+    }
+
     .c-nav-main__list {
         margin-bottom: 0;
 
@@ -106,6 +110,17 @@
         .is-selected & {
             color: palette(color-alpha);
             background-color: palette(color-background,light);
+        }
+
+        .c-nav-main--home & {
+            color: palette(color-beta,dark);
+
+            &:hover,
+            &:active {
+                text-decoration: none;
+                color: palette(color-alpha);
+                background-color: palette(color-background);
+            }
         }
     }
 
