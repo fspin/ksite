@@ -1,0 +1,26 @@
+---
+layout: default
+title: About
+section: about
+---
+
+<main class="c-row c-row--zero">
+    <div class="o-container">
+
+        {% for item in site.data.about %}
+
+        {% assign thecycle = 'even' %}
+
+            {%
+               include components.works.html
+
+               paragraphs=item.paragraphs
+               images=item.images
+               resume-title=item.resume-title
+               resume=item.resume
+            %}
+        {% endfor %}
+
+
+    </div>
+</main>
