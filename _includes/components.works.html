@@ -28,7 +28,7 @@
             <h2 class="c-card__title">{{ include.title }}</h2>
             <div class="c-card__meta">
                 <ul class="o-list">
-                    <li class="o-list__item">Material: {{ include.material }}</li>
+                    {% if include.material != null %}<li class="o-list__item">Material: {{ include.material }}</li>{% endif %}
                     <li class="o-list__item">{{ include.year }}</li>
                 </ul>
             </div>
