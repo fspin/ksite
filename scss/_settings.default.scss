@@ -157,6 +157,7 @@ $beta-leading                       : 2 !default;
 // ---
 
 $radius                             : 5px !default;
+$radius-zero                        : 0 !default;
 $border-width                       : 1px !default;
 $border-style                       : solid !default;
 
@@ -345,7 +346,7 @@ $label-margin-bottom                : $alpha-leading !default;
 
 $placeholder-font-family            : $alpha-font-family !default;
 $placeholder-font-style             : italic !default;
-$placeholder-color                  : palette(color-neutral, light) !default;
+$placeholder-color                  : palette(color-gamma, x-light);
 
 $firefox-inner-border-fix           : true !default;
 

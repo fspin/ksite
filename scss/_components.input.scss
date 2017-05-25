@@ -19,8 +19,9 @@
     -webkit-font-smoothing: antialiased; /* [2] */
     -moz-osx-font-smoothing: grayscale; /* [2] */
     background-color: palette(color-neutral,x-light);
-    border-radius: $radius;
-    border: $border-width $border-style palette(color-neutral);
+    border-radius: $radius-zero;
+    border: 0;
+    border-bottom: $border-width $border-style palette(color-background, dark);
     color: palette(color-neutral,dark);
     font-family: $alpha-font-family;
     margin: 0;
@@ -32,7 +33,7 @@
     &:focus {
         color: palette(color-neutral,dark);
         border-color: palette(color-alpha);
-        box-shadow: 0 0 2px palette(color-alpha,x-light);
+        // box-shadow: 0 0 2px palette(color-alpha,x-light);
     }
 
     &.has-error {
@@ -40,7 +41,7 @@
 
         &:focus {
             border-color: palette(color-error);
-            box-shadow: 0 0 2px palette(color-error,x-light);
+            // box-shadow: 0 0 2px palette(color-error,x-light);
         }
     }
 }

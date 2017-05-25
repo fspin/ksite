@@ -25,7 +25,7 @@
     touch-action: manipulation; /* [1] */
     background-image: none; /* [2] */
     white-space: nowrap; /* [3] */
-    border-radius: $radius;
+    border-radius: $radius-zero;
     border-style: solid;
     border-width: 1px;
     transition-duration: $animation-duration-alpha;
