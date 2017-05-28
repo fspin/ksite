@@ -2,7 +2,7 @@
   form-fields:
     name: name
     email: email
-    message: 'your message'
+    message: your message
     button: send
   fields:
     - type: mobile
