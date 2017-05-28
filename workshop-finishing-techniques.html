@@ -1,0 +1,33 @@
+---
+layout: default
+title: Workshop
+sub-page: Finishing-Techniques
+section: portfolio
+---
+{% assign finishing-techniques = site.data.workshop.finishing-techniques %}
+
+{% comment %}
+{% for work in finishing-techniques %}
+    <p>{{ work.title }} - {{ work.year }}</p>
+{% endfor %}
+{% endcomment %}
+<main class="c-row c-row--zero">
+    <div class="o-container">
+
+        {% for work in finishing-techniques limit:9 %}
+        {% capture thecycle %}{% cycle 'odd', 'even' %}{% endcapture %}
+
+            {%
+               include components.works.html
+
+               title=work.title
+               material=work.material
+               year=work.year
+               paragraphs=work.paragraphs
+               images=work.images
+            %}
+        {% endfor %}
+
+
+    </div>
+</main>
