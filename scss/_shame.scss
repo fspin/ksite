@@ -5,10 +5,12 @@ Hacks and quick fixes
 */
 .c-header {
     position: relative;
+    overflow-y: hidden;
 
-    @include padding-lr(.5,.5);
+    // @include padding-lr(.5,.5);
+    @include padding-lr(0,0);
 
-    @include mq(bp1) {
+    @include mq(bp3) {
         @include padding-lr(1,1);
     }
 
@@ -112,6 +114,9 @@ Hacks and quick fixes
         z-index: 10;
         color: #fff;
 
+        top: 50%;
+        transform:translateY(-50%);
+
         @include mq(bp2, max) {
             right: 0;
             width: 100%;
@@ -187,8 +192,9 @@ Hacks and quick fixes
     @include padding-left(1);
 }
 
-.u-max-w-550 {
-    max-width: 550px;
+.u-max-w-650 {
+    width: 100%;
+    max-width: 650px;
 }
 
 .c-form {
