@@ -13,18 +13,25 @@ description-2nd: 'Restoration'
 
 # Site navigation
 navigation:
-  - title: about
+  - title: About
     url: about/
-  - title: works
+  - title: Works
     url: works/
     subpaginas:
-      - subtitle: creation
+      - parent: Works
+      - subtitle: Creation
         suburl: works-creation/
-      - subtitle: restoration
+      - subtitle: Restoration
         suburl: works-restoration/
-  - title: workshop
+  - title: Workshop
     url: workshop/
-  - title: contact
+    subpaginas:
+      - parent: Workshop
+      - subtitle: Hand-Tools
+        suburl: workshop-hand-tools/
+      - subtitle: Finishing-Techniques
+        suburl: workshop-finishing-techniques/
+  - title: Contact
     url: contact/
 
 # Jekyll settings
