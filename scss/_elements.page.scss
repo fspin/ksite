@@ -8,7 +8,7 @@ html {
     font: $html-font-weight #{$html-font-size/16*100%}/#{$html-line-height} $html-font-family;
     -webkit-overflow-scrolling: touch;
     background-color: $html-background-color;
-    height: 100%;
+    // height: 100%;
 
     @if $html-responsive-font-size == true {
         @include mq($html-responsive-font-breakpoint) {
@@ -19,7 +19,7 @@ html {
 
 body {
     color: $body-color;
-    height: 100%;
+    // height: 100%;
 
     @if $body-font-smoothing == true {
         -webkit-font-smoothing: antialiased;

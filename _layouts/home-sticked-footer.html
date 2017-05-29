@@ -3,14 +3,14 @@
 
 {% include generic.head.html %}
 
-<!-- <body{% if page.section %} class="c-{{ page.section }}"{% endif%}> -->
-<body>
+<body{% if page.section %} class="c-{{ page.section }}"{% endif%}>
+
 
     <!-- Deprecated browser alert -->
     {% include components.browser-alert.html %}
     <!-- End deprecated browser alert -->
 
-    <div class="o-flex o-flex--vertical c-wrapper">
+    <!-- <div class="o-flex o-flex--vertical c-wrapper"> -->
 
         {{ content }}
 
@@ -22,7 +22,7 @@
         <!-- Footer javascript -->
         {% include generic.javascript.html %}
         <!-- End footer javascript -->
-    </div>
+    <!-- </div> -->
 
 </body>
 </html>

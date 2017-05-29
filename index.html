@@ -5,27 +5,20 @@ section: home
 ---
 
 
-<main class="c-row c-row--zero o-flex--grow-one o-flex">
-    <div class="o-container o-flex--grow-one c-content__body o-flex o-flex--justify-center o-flex--align-center">
+<main class="c-row c-row--zero c-content">
+    <div class="o-container">
+        <div class="c-hero">
 
-        <header class="c-title">
-            <h1 class="c-title__name">{{ site.title }}</h1>
-            <h3 class="c-title__tagline">{{ site.description }}</h3>
-            <h3 class="c-title__tagline">{{ site.description-2nd }}</h3>
-        </header>
+            <div class="c-hero__image">
+                <div class="c-ratio-image" style="background-image: url('../img/jpg/bg.jpg');" role="img" aria-label="{{ page.title }}" title="{{ page.title }}">
+                </div>
+            </div>
 
-        {% comment %}
-            position: absolute;
-            width: 100%;
-            z-index: 1000;
-            padding-left: 50%;
-            color: #fff;
-
-            image = 'home.jpg'
-        {% endcomment %}
-        {%
-            include molecules.image-central.html
-            image = 'bg.jpg'
-        %}
+            <header class="c-title">
+                <h1 class="c-title__name">{{ site.title }}</h1>
+                <h3 class="c-title__tagline">{{ site.description }}</h3>
+                <h3 class="c-title__tagline">{{ site.description-2nd }}</h3>
+            </header>
+        </div>
     </div>
 </main>

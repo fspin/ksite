@@ -70,6 +70,9 @@
     }
 
     .c-nav-main__item {
+        @include padding-lr(.75,.75);
+        @include padding-tb(.5,.5);
+
         & + & {
             border-top: 1px dotted palette(color-neutral,light);
         }

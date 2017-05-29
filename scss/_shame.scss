@@ -3,7 +3,7 @@ Shame
 ---
 Hacks and quick fixes
 */
-.c-header {
+.c-header__nav-wrapper {
     position: relative;
     overflow-y: hidden;
 
@@ -36,19 +36,6 @@ Hacks and quick fixes
 
 
 
-.c-wrapper {
-    height: auto;
-    min-height: 100%;
-}
-
-    .c-content__body,
-    .u-bg-main-color {
-        background-color: palette(color-background);
-    }
-
-    .c-content__body {
-        position: relative;
-    }
 
 
 .c-card__title {
@@ -84,6 +71,7 @@ Hacks and quick fixes
     max-width: 155px;
 }
 
+
 .c-thumbnail__wrapper {
     position: relative;
     padding-bottom: 60%;
@@ -107,20 +95,55 @@ Hacks and quick fixes
     }
 }
 
-    .c-title {
+    .c-border-white {
+        border: 15px solid white;
+        // min-height: auto;
+        height: 90%;
+        width: 90%;
+        display: block;
         position: absolute;
-        // right: 7.5rem;
-        right: 15%;
-        z-index: 10;
+        // right: 0;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-image: url('../img/jpg/bg.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        // -webkit-backface-visibility: hidden;
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            // border: 20px solid white;
+            background: linear-gradient(to right bottom, rgba(0,0,0,1) 1%, rgba(0,0,0,.2) 30%, rgba(0,0,0,.2) 75%, rgba(0,0,0,1) 99%);
+        }
+    }
+
+    .c-title {
         color: #fff;
 
+        position: absolute;
         top: 50%;
-        transform:translateY(-50%);
+        right: 0;
+        transform: translateY(-50%);
+        @include padding-lr(1.5);
 
-        @include mq(bp2, max) {
-            right: 0;
-            width: 100%;
-            padding: 1.5rem;
+        width: 100%;
+        z-index: 5;
+
+        @include mq(bp2) {
+            right: 7%;
+            width: auto;
+            @include padding-lr(0);
+        }
+
+        @include mq(bp3) {
+            right: 15%;
         }
     }
 
@@ -129,7 +152,8 @@ Hacks and quick fixes
         @include text-dimensions($ms8,2.5);
 
         @include mq(bp2, max) {
-            @include text-dimensions($ms6,2.5);
+            // @include text-dimensions($ms6,2.5);
+            @include text-dimensions($ms6,1.5);
         }
     }
 
@@ -139,23 +163,24 @@ Hacks and quick fixes
         margin-left: .25rem;
 
         @include mq(bp2, max) {
-            @include text-dimensions($h5-font-size,1);
+            @include text-dimensions($ms0,.75);
         }
     }
 
-.c-thumbnail__img {
-    position: absolute;
-    top: 0;
-    left: 0;
+.c-hero__image {
+    position: relative;
+    max-width: 1200px;
     width: 100%;
     height: 100%;
-    padding: 3%;
-    background: #fff;
 
-    background-size: cover;
-    background-position: center;
+    @include mq(bp3) {
+        border: 13px solid #fff;
+        width: 90%;
+        height: 80%;
+        margin: auto;
+    }
 
-    .c-home--image &:before {
+    .c-ratio-image:before {
         content: '';
         position: absolute;
         top: 0;
@@ -164,6 +189,23 @@ Hacks and quick fixes
         height: 100%;
         background: linear-gradient(to right bottom, rgba(0,0,0,1) 1%, rgba(0,0,0,.2) 30%, rgba(0,0,0,.2) 75%, rgba(0,0,0,1) 99%);
     }
+}
+    // .c-hero__image {
+    // }
+
+// .c-hero__image {
+// .c-thumbnail__img {
+.c-ratio-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    padding: 3%;
+    background: #fff;
+    background-size: cover;
+    background-position: center;
 }
 
 .c-resume {
@@ -176,20 +218,26 @@ Hacks and quick fixes
     @include text-dimensions($ms1);
     color: palette(color-gamma);
 
-    position: relative;
-    left: 0;
-    top: 1.25rem;
-    width: 5.5rem;
-    text-align: right;
-    line-height: 1rem;
+    @include mq(bp3) {
+        left: 0;
+        top: 1.25rem;
+        width: 5.5rem;
+        text-align: right;
+        line-height: 1rem;
+        position: relative;
+    }
 }
 
 .c-resume__description {
-    border-left: 1px solid palette(color-background, dark);
     // margin-left: 2rem;
-    @include margin-left(6.75);
-    @include padding-bottom(0);
     @include padding-left(1);
+    @include margin-bottom(1);
+
+    @include mq(bp3) {
+        @include margin-left(6.75);
+        @include padding-bottom(0);
+        border-left: 1px solid palette(color-background, dark);
+    }
 }
 
 .u-max-w-650 {
@@ -199,4 +247,103 @@ Hacks and quick fixes
 
 .c-form {
     width: 80%;
+}
+
+
+
+.c-wrapper {
+    height: 0;
+    min-height: 100%;
+
+    // ie
+    overflow: hidden;
+}
+
+    // .c-content__body,
+    .u-bg-main-color {
+        background-color: palette(color-background);
+    }
+    //
+    // .c-content__body {
+    //     position: relative;
+    //
+    //     // ie
+    //     overflow: hidden;
+    // }
+
+
+// new:
+.c-home {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    // align-items: flex-start;
+
+    // @include mq(bp3, max) {
+    //     background-color: palette(color-background);
+    // }
+
+
+
+    .c-row {
+        flex: 1 auto;
+    }
+
+    .c-content {
+        order: 2;
+        flex: 1 100%;
+
+        @include mq(bp3) {
+            order: 0;
+        }
+    }
+
+    .c-hero,
+    .c-content__body {
+        position: relative;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        min-height: 250px;
+        height: calc(100vh - 56px);
+        background-color: palette(color-background);
+
+        @include mq(bp3) {
+            height: calc(100vh - 96px);
+            justify-content: space-around;
+        }
+
+        @include mq(bp5) {
+            height: calc(100vh - 108px);
+        }
+
+    }
+}
+
+.c-header-home {
+    @media screen and (orientation: portrait) {
+        @include mq(bp3,max) {
+            width: 100%;
+            z-index: 10;
+        }
+    }
+}
+
+.c-content__body {
+    // background-color: palette(color-background);
+    // padding: 2rem;
+}
+
+.c-image {
+    width: 100%;
+    margin: auto;
+    display: block;
+}
+
+
+
+.c-image--border {
+    border: 15px solid palette(color-neutral,x-light);
 }
