@@ -1,0 +1,32 @@
+hand-tools:
+  - title: Planes
+    paragraphs:
+      - 'The most profound woodworking tools; planes. It is one of the pleasures of woodworking to master this tool well. There are some differences between western and Japanese planes. I like them both. In my opinion, western planes are functional and Japanese planes are organic. But all planes, be it western or Japanese, have their own peculiarity and are full of character'
+    images:
+      - 'Hand-Tools/planes.jpg'
+  - title: Chisels
+    paragraphs:
+      - 'There are chisels, gouges and carving/sculpting tools. And furthermore, there are chisels handled hitting by hammer/mallet, and slicks for making beam joints and for finishing work. Variety of blade width and sweep is very important. Most of the moldings can be copied by use of carving tools. Chisels are used at places where planes cannot reach and they are crucial when making joints.'
+    images:
+      - 'Hand-Tools/chisels.jpg'
+  - title: 'Saws & Knives'
+    paragraphs:
+      - 'The saw is one of the three sacred treasures together with the plane and the chisel. I only use Japanese saws because of their superior quality. It is an artisanal skill to be able to saw exactly along the layout lines, not losing time to correct by shaving of spare layout lines with the chisel.'
+      - 'Knives are precision tools. Their cutting function consists of carving, grooving for inlay works and cutting veneers.'
+    images:
+      - 'Hand-Tools/saws-knives.jpg'
+finishing-techniques:
+  - title: 'French Polishing'
+    paragraphs:
+      - 'Before applying the polish layers, it is important to fill wood pores with small amounts of fine pumice powder; crushed volcanic glass. After this preparation, many thin coats of natural resin of lac insects (shellac) dissolved in alcohol are applied by using a rubbing pad lubricated with turpentine. The delicate balance of concentrated shellac, alcohol and turpentine is key to beautiful results.'
+    images:
+      - 'Finishing-Techniques/french-polishing.jpg'
+  - title: 'Suri Urushi'
+    paragraphs:
+      - 'Urushi (japan) is made from the natural resin of the Asian lacquer tree and is used to protect and provide a beautiful gloss to furniture, bowls, boxes, handles and jewelry in Japan. It is a very sustainable lacquer finishing: once fully hardened, Urushi is resistant to water, heat, alcohol, acids, alkaline solutions and ageing.'
+      - 'One of the Urushi techniques is Suri (rubbing) Urushi. Traditionally, it consists of applying many thin coats of Kiurushi (unpurified Urushi) and removing excess by rubbing. Kiurushi provides gloss and amber color. But it is also interesting to use purified Urushi.'
+    images:
+      - 'Finishing-Techniques/suri-urushi.jpg'
+  - title: 'Other'
+    paragraphs:
+      - 'Other available finishing options: beeswax, natural oil.'

@@ -14,41 +14,66 @@
 {% endcomment %}
 
 <section class="c-work o-flex o-flex--wrap o-flex--align-center">
-    <div class="c-work__img {% if thecycle == 'odd' %}c-work__img-left {% else %}c-work__img-right {% endif %}u-1-of-2-bp4">
+    <div class="c-work__img {% if thecycle == 'odd' %}c-work__img-left {% else %}c-work__img-right {{ include.class-flex-start }} {% endif %}u-1-of-2-bp4">
         <div class="c-card c-card--alpha c-card--img">
             {% if include.images %}
             <p class="o-media">
-                <img src="/img/jpg/{{ include.images | first }}" alt="{{ include.title }}, {{ include.year }}" class="o-media--img">
+                <img src="/img/jpg/{{ include.images | first }}" alt="{{ include.title }}, {{ include.year }}" class="o-media--img{% if include.resume %} u-max-w-650{% endif %}">
             </p>
             {% endif %}
         </div>
     </div>
-    <div class="c-work__text {% if thecycle == 'odd' %}c-work__text-right {% else %} c-work__text-left {% endif %}u-1-of-2-bp4">
+
+    <div class="c-work__text {% if thecycle == 'odd' %}c-work__text-right {% else %}c-work__text-left {% endif %}u-1-of-2-bp4">
         <div class="c-card">
+            {% if include.title %}
             <h2 class="c-card__title">{{ include.title }}</h2>
             <div class="c-card__meta">
                 <ul class="o-list">
-                    <li class="o-list__item">Material: {{ include.material }}</li>
+                    {% if include.material != null %}<li class="o-list__item">Material: {{ include.material }}</li>{% endif %}
                     <li class="o-list__item">{{ include.year }}</li>
                 </ul>
             </div>
+            {% endif %}
+
             {% for paragraph in include.paragraphs %}
                 <p class="c-card__description">{{ paragraph }}</p>
             {% endfor %}
         </div>
 
-        {% if include.images %}
+        {% if include.images and page.section != 'about' %}
         <!-- <ul class="o-list c-thumbnails u-push-1-of-2-bp4 u-2-of-5-bp4"> -->
         <ul class="o-list c-thumbnails">
             {% for image in include.images limit:6 %}
             <li class="o-list__item c-thumbnail">
-                <div class="c-thumbnail__wrapper">
-                    <div class="c-thumbnail__img" style="background-image: url('../img/jpg/{{ image }}');" role="img" aria-label="Image number {{ forloop.index }} of {{ include.title }}" title="{{ include.title }}">
+                <!-- <div class="c-thumbnail__wrapper">
+                    <div class="c-background-image c-thumbnail__img" style="background-image: url('../img/jpg/{{ image }}');" role="img" aria-label="Image number {{ forloop.index }} of {{ include.title }}" title="{{ include.title }}">
                     </div>
-                </div>
+                </div> -->
+                {% include molecules.image-ratio.html
+
+                    image=image
+                    title=include.title
+                    aria-label=include.title
+                %}
             </li>
             {% endfor %}
         </ul>
         {% endif %}
+
     </div>
+
+    {% if include.resume %}
+    <div class="c-work__text c-work__text-left c-work__text-resume">
+        <div class="c-card">
+            <h3 class="c-card__title">{{ include.resume-title | capitalize }}</h3>
+            <dl class="c-resume">
+                {% for item in include.resume %}
+                    <dt class="c-resume__year">{{ item.year }}</dt>
+                    <dd class="c-resume__description">{{ item.description }}</dd>
+                {% endfor %}
+            </dl>
+        </div>
+    </div>
+    {% endif %}
 </section>

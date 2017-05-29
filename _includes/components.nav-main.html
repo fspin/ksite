@@ -1,19 +1,47 @@
-<nav class="c-nav-main js-nav">
+<nav class="c-nav-main js-nav{% if page.section == 'home' %} c-nav-main--home{% endif %}">
     <ul class="o-list c-nav-main__list">
         <!-- Manually define homepage link -->
+        {% comment %}
         <li class="c-nav-main__item{% if page.section == "home" %} is-selected{% endif %}">
             <a href="{{ site.github.url }}/" class="c-nav-main__link">Home</a>
         </li>
+        {% endcomment %}
 
         <!-- Define your site navigation in _config.yml -->
         {% for item in site.navigation %}
-        <li class="c-nav-main__item{% if page.url contains item.url %} is-selected{% endif %}">
-            <a href="{{ site.github.url }}/{{ item.url }}" class="c-nav-main__link">{{ item.title | capitalize }}</a>
+
+        <li class="c-nav-main__item{% if item.title == page.title %} is-selected{% endif %}">
+            <a href="{{ site.github.url }}/{{ item.url }}" class="c-nav-main__link">
+                {{ item.title | capitalize }}
+            </a>
         </li>
         {% endfor %}
     </ul>
+
+    {% for item in site.navigation %}
+        {% if item.subpaginas and page.title == item.title %}
+            {% if page.title == item.title %}
+            <div class="c-nav-subnav">
+                <ul class="o-list c-nav-main__list c-nav-sub__list">
+                    {% for subitem in item.subpaginas %}
+                        <li class="c-nav-main__item c-nav-sub__item {% if page.url contains subitem.suburl %} is-selected{% endif %}">
+                            <a href="{{ site.github.url}}/{{ subitem.suburl }}" class="c-nav-main__link c-nav-sub__link">
+                                {{ subitem.subtitle | capitalize }}
+                            </a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            {% endif %}
+            <!-- {{ item.url }} - {{ page.url }} - {{ item.subpaginas[0].parent }}<br> -->
+
+        {% endif %}
+    {% endfor %}
 </nav>
+
+
 
 <button class="c-nav-main-trigger js-nav-trigger">
     {% include atom.symbol.html value="hamburger" %} Menu
+    {% include atom.symbol.html value="close" %}
 </button>

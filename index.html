@@ -1,58 +1,24 @@
 ---
-layout: default
+layout: home-sticked-footer
 title: Homepage
 section: home
 ---
 
 
-<main class="c-row c-row--zero">
+<main class="c-row c-row--zero c-content">
     <div class="o-container">
-        <section class="c-section c-content">
-            <div class="o-grid o-grid--gutter">
-                <div class="o-grid__item">
-                    <h1>Chopstick Boilerplate</h1>
-                    <p class="tagline">// The lightweight, responsive, plug &amp; play design framework</p>
+        <div class="c-hero">
+
+            <div class="c-hero__image">
+                <div class="c-ratio-image" style="background-image: url('../img/jpg/bg.jpg');" role="img" aria-label="{{ page.title }}" title="{{ page.title }}">
                 </div>
             </div>
 
-            <div class="o-grid o-grid--gutter c-main-row">
-                <div class="o-grid__item u-1-of-2-bp3">
-                    <h2>Opstick, opstick, opstick...</h2>
-                    <p>One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections.</p>
-                    <p>
-                        <a href="#" class="c-button c-button--alpha c-button--md">
-                            Button {% include atom.symbol.html value="right" %}
-                        </a>
-                    </p>
-                </div>
-                <div class="o-grid__item u-1-of-2-bp3">
-                    <h2>Soep eet je met een...</h2>
-                    <p>The bedding was hardly able to cover it and seemed ready to slide off any moment. His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked.</p>
-                    <p>
-                        <a href="#" class="c-button c-button--beta c-button--md">
-                            Button  {% include atom.symbol.html value="right" %}
-                        </a>
-                    </p>
-                </div>
-            </div>
-
-            <div class="o-grid o-grid--gutter c-doormat-row">
-                <div class="o-grid__item u-1-of-3-bp4">
-                    <h5>Lorem ipsum dolor sit</h5>
-                    <p>The bedding was hardly able to cover it and seemed ready to slide off any moment. His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. </p>
-                </div>
-                <div class="o-grid__item u-1-of-3-bp4">
-                    <h5>Lorem ipsum dolor sit</h5>
-                    <p>The bedding was hardly able to cover it and seemed ready to slide off any moment. His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. </p>
-                </div>
-                <div class="o-grid__item u-1-of-3-bp4">
-                    <h5>Lorem ipsum dolor sit</h5>
-                    <p>The bedding was hardly able to cover it and seemed ready to slide off any moment. His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. </p>
-                </div>
-            </div>
-
-        </section>
-
-
+            <header class="c-title">
+                <h1 class="c-title__name">{{ site.title }}</h1>
+                <h3 class="c-title__tagline">{{ site.description }}</h3>
+                <h3 class="c-title__tagline">{{ site.description-2nd }}</h3>
+            </header>
+        </div>
     </div>
 </main>

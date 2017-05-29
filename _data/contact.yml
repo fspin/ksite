@@ -1,0 +1,19 @@
+- contact-title: contact
+  form-fields:
+    name: name
+    email: email
+    message: your message
+    button: send
+  fields:
+    - type: mobile
+      info: +32 (0) 487 10 07 92
+    - type: email
+      info: info@kentatakeshige.be
+    - type: btw
+      info: xxxx-xxx
+    - type: visiting workshop
+      info: by appointment
+  contact-data:
+    - 'Burggravenlaan 17'
+    - '9940 Evergem'
+    - 'Belgium'

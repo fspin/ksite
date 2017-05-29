@@ -138,6 +138,8 @@ $ms13                               : 100 !default;
 
 $alpha-font-family                  : 'Marcellus', serif !default;
 $beta-font-family                   : 'Junge', serif !default;
+$gamma-font-family                  : 'Philosopher', sans-serif !default;
+$mono-font-family                   : monospace !default;
 
 $alpha-font-size                    : $ms0 !default;
 
@@ -155,6 +157,7 @@ $beta-leading                       : 2 !default;
 // ---
 
 $radius                             : 5px !default;
+$radius-zero                        : 0 !default;
 $border-width                       : 1px !default;
 $border-style                       : solid !default;
 
@@ -232,7 +235,7 @@ $html-font-weight                   : $alpha-font-weight !default;
 $html-font-size                     : $alpha-font-size !default;
 $html-line-height                   : $alpha-line-height !default;
 
-$html-responsive-font-size          : false !default;
+$html-responsive-font-size          : true !default;
 $html-responsive-font-breakpoint    : bp5 !default;
 $html-responsive-font-magnification : 112.5% !default;
 
@@ -343,7 +346,7 @@ $label-margin-bottom                : $alpha-leading !default;
 
 $placeholder-font-family            : $alpha-font-family !default;
 $placeholder-font-style             : italic !default;
-$placeholder-color                  : palette(color-neutral, light) !default;
+$placeholder-color                  : palette(color-gamma, x-light);
 
 $firefox-inner-border-fix           : true !default;
 
@@ -364,7 +367,7 @@ $caption-padding-bottom             : $alpha-leading !default;
 // Grid
 // ---
 
-$grid-max-width                     : map-get($breakpoints,bp5) !default;
+$grid-max-width                     : map-get($breakpoints,bp4) !default;
 $grid-gutter                        : $columns-gutter !default;
 
 // ---

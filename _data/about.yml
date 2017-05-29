@@ -1,0 +1,37 @@
+- resume-title: resumé
+  images:
+    - 'me.jpg'
+  paragraphs:
+    - 'Since a long time I am deeply fascinated by antique folk crafts. This made me plunge into the world of woodworking. Woodworks become more beautiful in time, through daily use and through histories. We can feel their warmth. It is my wish as a restorer to be able to build the bridge for those woodworks to continue to the next generation.'
+    - 'When I repair or restore woodworks that carry people’s life and heart, I restore the original as much as possible with respect for their makers. I take into account that there is an ethical restoration method on the one hand and that there should be enough strength for daily use on the other hand.'
+    - 'I am proud of the traditional handwork I apply. Joinery, shaving, carving and finishing techniques are practiced by hand and hand tools. Well-kept tools become the extension of hands to make the most of the character and beauty of wood.'
+    - 'The final goal of woodworking is to create a lifelong companion. The result shows the good works of a craftsman. I am doing woodworking to reach good results by using eastern and western knowledge and techniques.'
+  resume:
+    - year: 1978
+      description: 'Born in Osaka, Japan'
+    - year: 2001
+      description: 'Graduated from Kansai University, Faculty of Literature'
+    - year: 2003
+      description: 'Graduated from Nagano Agematsu Technical College, woodworking course'
+    - year: 2003
+      description: 'Training under craftsman Tatsuya Furuse'
+    - year: 2004 - 06
+      description: 'Employed by Japan International Cooperation Agency, dispatched to Botswana as a woodworker'
+    - year: 2007
+      description: 'Royal Academy of Antwerp, Faculty of Conservation and Restoration'
+    - year: 2007
+      description: 'Move to Ghent city'
+    - year: 2008 - 10
+      description: 'Participate in art project SHÔ by Treibgut'
+    - year: 2010 - 13
+      description: 'Work in furniture restoration workshop'
+    - year: 2011 - 15
+      description: 'Enrolled in Puurs Music Instrument Building Center, violin building course'
+    - year: 2012 - 15
+      description: 'Restoration Home'
+    - year: 2013
+      description: 'Move to Evergem'
+    - year: 2015
+      description: 'Study under Urushi artist Tatsuji Ichihara'
+    - year: 2017
+      description: 'Established woodworking workshop Kenta Takeshige'

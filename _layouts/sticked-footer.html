@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+{% include generic.head.html %}
+
+<!-- <body{% if page.section %} class="c-{{ page.section }}"{% endif%}> -->
+<body>
+
+    <!-- Deprecated browser alert -->
+    {% include components.browser-alert.html %}
+    <!-- End deprecated browser alert -->
+
+    <div class="o-flex o-flex--vertical c-wrapper"><!-- Page header -->
+        {% include components.header.html %}
+        <!-- End page header -->
+
+        {{ content }}
+
+        <!-- Page footer -->
+        {% include components.footer.html %}
+        <!-- End page footer -->
+
+        <!-- Footer javascript -->
+        {% include generic.javascript.html %}
+        <!-- End footer javascript -->
+    </div>
+
+</body>
+</html>
