@@ -5,7 +5,7 @@ var chopstick =
     {
         chopstick.loadObject(chopstick.mobileNav, 'chopstick.mobileNav');
         chopstick.loadObject(chopstick.hide, 'chopstick.hide');
-        chopstick.loadObject(chopstick.toggle, 'chopstick.toggle');
+        // chopstick.loadObject(chopstick.toggle, 'chopstick.toggle');
     },
 
     /**

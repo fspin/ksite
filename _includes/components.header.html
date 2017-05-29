@@ -1,13 +1,11 @@
-<div class="js-nav-holder c-row c-row--zero {% if page.section == 'home' %}c-header-home{% endif %}">
-    <div class="o-container c-header__nav-wrapper o-flex o-flex--wrap{% if page.section == 'home' %} o-flex--justify-end u-bg-main-color{% else %} o-flex--justify-space-between{% endif %}">
-        <!-- <div class="o-grid">
-            <div class="o-grid__item"> -->
+<div class="js-nav-holder c-row c-row--zero">
+    <div class="o-container">
+        <div class="c-header o-flex o-flex--wrap{% if page.section == 'home' %} c-header--home o-flex--justify-end{% else %} o-flex--justify-space-between{% endif %}">
             {% if page.section != 'home' %}
                 {% include components.logo.html %}
             {% endif %}
 
             {% include components.nav-main.html %}
-            <!-- </div>
-        </div> -->
+        </div>
     </div>
 </div>

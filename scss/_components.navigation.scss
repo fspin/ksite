@@ -12,7 +12,7 @@
     text-transform: lowercase;
 
     order: 2;
-    @include margin-top(1);
+    // @include margin-top(1);
 
     @include mq(bp1) {
         @include margin-top(0);
@@ -30,12 +30,14 @@
     }
 }
 
-    .c-nav-main--home {
-        // background-color: palette(color-background);
-    }
+.c-nav-subnav {
+    // display: none;
+}
 
     .c-nav-main__list {
         margin-bottom: 0;
+        background-color: palette(color-background,x-light);
+
 
         @include mq(bp1) {
             border-top: 1px dotted palette(color-neutral,light);
@@ -70,8 +72,8 @@
     }
 
     .c-nav-main__item {
-        @include padding-lr(.75,.75);
-        @include padding-tb(.5,.5);
+        // @include padding-lr(.75,.75);
+        // @include padding-tb(.5,.5);
 
         & + & {
             border-top: 1px dotted palette(color-neutral,light);
@@ -94,6 +96,9 @@
         font-weight: $alpha-font-weight;
         @include text-dimensions($alpha-font-size,1,0,.25,.25);
 
+        @include padding-lr(.75,.75);
+        @include padding-tb(.5,.5);
+
         @include mq(bp3) {
             @include padding-tb(1.75,1.75);
             @include padding-lr(1,1);
@@ -110,9 +115,8 @@
             background-color: palette(color-background,light);
         }
 
-        .is-selected & {
+        .is-selected > & {
             color: palette(color-alpha);
-            background-color: palette(color-background,light);
         }
 
         .c-nav-main--home & {

@@ -1,5 +1,5 @@
 ---
-layout: home-sticked-footer
+layout: sticked-footer
 title: Homepage
 section: home
 ---
@@ -9,16 +9,19 @@ section: home
     <div class="o-container">
         <div class="c-hero">
 
+            <header class="c-hero__title">
+                <h1 class="c-title-site">{{ site.title }}</h1>
+                {% for line in site.description %}
+                    <h3 class="c-title-tagline">{{ line }}</h3>
+                {% endfor %}
+            </header>
+
             <div class="c-hero__image">
                 <div class="c-ratio-image" style="background-image: url('../img/jpg/bg.jpg');" role="img" aria-label="{{ page.title }}" title="{{ page.title }}">
                 </div>
             </div>
 
-            <header class="c-title">
-                <h1 class="c-title__name">{{ site.title }}</h1>
-                <h3 class="c-title__tagline">{{ site.description }}</h3>
-                <h3 class="c-title__tagline">{{ site.description-2nd }}</h3>
-            </header>
+
         </div>
     </div>
 </main>

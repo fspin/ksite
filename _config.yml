@@ -8,8 +8,9 @@
 # Meta data
 title: 'Kenta Takeshige'
 author: ''
-description: 'Eastern and Western Woodworking'
-description-2nd: 'Restoration'
+description:
+  - 'Eastern and Western Woodworking'
+  - 'Restoration'
 
 # Site navigation
 navigation:
@@ -18,7 +19,7 @@ navigation:
   - title: Works
     url: works/
     subpaginas:
-      - parent: Works
+      # - parent: Works
       - subtitle: Creation
         suburl: works-creation/
       - subtitle: Restoration
@@ -26,7 +27,7 @@ navigation:
   - title: Workshop
     url: workshop/
     subpaginas:
-      - parent: Workshop
+      # - parent: Workshop
       - subtitle: Hand-Tools
         suburl: workshop-hand-tools/
       - subtitle: Finishing-Techniques

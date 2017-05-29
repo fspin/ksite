@@ -3,27 +3,27 @@
 
 {% include generic.head.html %}
 
-<!-- <body{% if page.section %} class="c-{{ page.section }}"{% endif%}> -->
-<body>
+<body{% if page.section %} class="c-{{ page.section }}"{% endif%}>
 
     <!-- Deprecated browser alert -->
     {% include components.browser-alert.html %}
     <!-- End deprecated browser alert -->
 
-    <div class="o-flex o-flex--vertical c-wrapper"><!-- Page header -->
-        {% include components.header.html %}
-        <!-- End page header -->
+    <!-- Page header -->
+    {% include components.header.html %}
+    <!-- End page header -->
 
-        {{ content }}
+    {{ content }}
 
-        <!-- Page footer -->
+    <!-- Page footer -->
+    {% if page.section != 'home' %}
         {% include components.footer.html %}
-        <!-- End page footer -->
+    {% endif %}
+    <!-- End page footer -->
 
-        <!-- Footer javascript -->
-        {% include generic.javascript.html %}
-        <!-- End footer javascript -->
-    </div>
+    <!-- Footer javascript -->
+    {% include generic.javascript.html %}
+    <!-- End footer javascript -->
 
 </body>
 </html>

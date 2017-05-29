@@ -3,11 +3,12 @@ Shame
 ---
 Hacks and quick fixes
 */
-.c-header__nav-wrapper {
+.c-header {
     position: relative;
     overflow-y: hidden;
+    background-color: palette(color-background, light);
+    width: 100%;
 
-    // @include padding-lr(.5,.5);
     @include padding-lr(0,0);
 
     @include mq(bp3) {
@@ -16,9 +17,7 @@ Hacks and quick fixes
 
     @include mq(bp4) {
         @include padding-lr(2,2);
-        // @include padding-tb(1,1);
     }
-
 
     &:after {
         content: '';
@@ -33,7 +32,9 @@ Hacks and quick fixes
     }
 }
 
-
+.c-header--home {
+    background-color: palette(color-background);
+}
 
 
 
@@ -59,6 +60,7 @@ Hacks and quick fixes
 
 
 
+
 .c-thumbnails {
     flex-wrap: wrap;
     display: flex;
@@ -79,117 +81,51 @@ Hacks and quick fixes
     margin-bottom: 10px;
     border: 7px solid #fff;
 
-    &.u-centered-image {
-        min-width: 300px;
-        width: 80%;
-        max-width: 1200px;
-        margin-top: 1rem;
-        margin-bottom: 1rem;
-        padding-bottom: 45%;
-    }
-
-    &.c-home--image {
-        height: 95%;
-        width: 95%;
-        padding-bottom: 0;
-    }
+    // &.u-centered-image {
+    //     min-width: 300px;
+    //     width: 80%;
+    //     max-width: 1200px;
+    //     margin-top: 1rem;
+    //     margin-bottom: 1rem;
+    //     padding-bottom: 45%;
+    // }
+    //
+    // &.c-home--image {
+    //     height: 95%;
+    //     width: 95%;
+    //     padding-bottom: 0;
+    // }
 }
 
-    .c-border-white {
-        border: 15px solid white;
-        // min-height: auto;
-        height: 90%;
-        width: 90%;
-        display: block;
-        position: absolute;
-        // right: 0;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        background-image: url('../img/jpg/bg.jpg');
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        // -webkit-backface-visibility: hidden;
+    // .c-border-white {
+    //     border: 15px solid white;
+    //     // min-height: auto;
+    //     height: 90%;
+    //     width: 90%;
+    //     display: block;
+    //     position: absolute;
+    //     // right: 0;
+    //     top: 50%;
+    //     left: 50%;
+    //     transform: translate(-50%, -50%);
+    //     background-image: url('../img/jpg/bg.jpg');
+    //     background-size: cover;
+    //     background-position: center;
+    //     background-repeat: no-repeat;
+    //     // -webkit-backface-visibility: hidden;
+    //
+    //     &:before {
+    //         content: '';
+    //         position: absolute;
+    //         top: 0;
+    //         left: 0;
+    //         width: 100%;
+    //         height: 100%;
+    //         // border: 20px solid white;
+    //         background: linear-gradient(to right bottom, rgba(0,0,0,1) 1%, rgba(0,0,0,.2) 30%, rgba(0,0,0,.2) 75%, rgba(0,0,0,1) 99%);
+    //     }
+    // }
 
-        &:before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            // border: 20px solid white;
-            background: linear-gradient(to right bottom, rgba(0,0,0,1) 1%, rgba(0,0,0,.2) 30%, rgba(0,0,0,.2) 75%, rgba(0,0,0,1) 99%);
-        }
-    }
-
-    .c-title {
-        color: #fff;
-
-        position: absolute;
-        top: 50%;
-        right: 0;
-        transform: translateY(-50%);
-        @include padding-lr(1.5);
-
-        width: 100%;
-        z-index: 5;
-
-        @include mq(bp2) {
-            right: 7%;
-            width: auto;
-            @include padding-lr(0);
-        }
-
-        @include mq(bp3) {
-            right: 15%;
-        }
-    }
-
-    .c-title__name {
-        margin-bottom: .5rem;
-        @include text-dimensions($ms8,2.5);
-
-        @include mq(bp2, max) {
-            // @include text-dimensions($ms6,2.5);
-            @include text-dimensions($ms6,1.5);
-        }
-    }
-
-    .c-title__tagline {
-        font-family: $gamma-font-family;
-        margin-bottom: 0;
-        margin-left: .25rem;
-
-        @include mq(bp2, max) {
-            @include text-dimensions($ms0,.75);
-        }
-    }
-
-.c-hero__image {
-    position: relative;
-    max-width: 1200px;
-    width: 100%;
-    height: 100%;
-
-    @include mq(bp3) {
-        border: 13px solid #fff;
-        width: 90%;
-        height: 80%;
-        margin: auto;
-    }
-
-    .c-ratio-image:before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(to right bottom, rgba(0,0,0,1) 1%, rgba(0,0,0,.2) 30%, rgba(0,0,0,.2) 75%, rgba(0,0,0,1) 99%);
-    }
-}
     // .c-hero__image {
     // }
 
@@ -249,8 +185,6 @@ Hacks and quick fixes
     width: 80%;
 }
 
-
-
 .c-wrapper {
     height: 0;
     min-height: 100%;
@@ -260,10 +194,10 @@ Hacks and quick fixes
 }
 
     // .c-content__body,
-    .u-bg-main-color {
-        background-color: palette(color-background);
-    }
-    //
+    // .u-bg-main-color {
+    //     background-color: palette(color-background);
+    // }
+
     // .c-content__body {
     //     position: relative;
     //
@@ -272,18 +206,11 @@ Hacks and quick fixes
     // }
 
 
-// new:
+// Home
 .c-home {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    // align-items: flex-start;
-
-    // @include mq(bp3, max) {
-    //     background-color: palette(color-background);
-    // }
-
-
 
     .c-row {
         flex: 1 auto;
@@ -294,56 +221,109 @@ Hacks and quick fixes
         flex: 1 100%;
 
         @include mq(bp3) {
-            order: 0;
-        }
-    }
-
-    .c-hero,
-    .c-content__body {
-        position: relative;
-
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        min-height: 250px;
-        height: calc(100vh - 56px);
-        background-color: palette(color-background);
-
-        @include mq(bp3) {
-            height: calc(100vh - 96px);
-            justify-content: space-around;
-        }
-
-        @include mq(bp5) {
-            height: calc(100vh - 108px);
-        }
-
-    }
-}
-
-.c-header-home {
-    @media screen and (orientation: portrait) {
-        @include mq(bp3,max) {
-            width: 100%;
-            z-index: 10;
+            order: -1;
         }
     }
 }
 
+
+// Hero
+.c-hero,
 .c-content__body {
-    // background-color: palette(color-background);
-    // padding: 2rem;
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 250px;
+    height: calc(100vh - 56px);
+    background-color: palette(color-background);
+
+    @include mq(bp3) {
+        height: calc(100vh - 96px);
+        justify-content: space-around;
+    }
+
+    @include mq(bp5) {
+        height: calc(100vh - 108px);
+    }
 }
 
-.c-image {
+// .c-header-home {
+//     @media screen and (orientation: portrait) {
+//         @include mq(bp3,max) {
+//             width: 100%;
+//             z-index: 10;
+//         }
+//     }
+// }
+
+
+.c-hero__title {
+    color: #fff;
+
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    @include padding-lr(1.5);
+
     width: 100%;
-    margin: auto;
-    display: block;
+    z-index: 5;
+
+    @include mq(bp2) {
+        right: 7%;
+        width: auto;
+        @include padding-lr(0);
+    }
+
+    @include mq(bp3) {
+        right: 15%;
+    }
 }
 
+    .c-title-site {
+        margin-bottom: .5rem;
+        @include text-dimensions($ms8,2.5);
 
+        @include mq(bp2, max) {
+            @include text-dimensions($ms6,1.5);
+        }
+    }
 
-.c-image--border {
-    border: 15px solid palette(color-neutral,x-light);
+    .c-title-tagline {
+        font-family: $gamma-font-family;
+        margin-bottom: 0;
+        margin-left: .25rem;
+
+        @include mq(bp2, max) {
+            @include text-dimensions($ms0,.75);
+        }
+    }
+
+.c-hero__image {
+    position: relative;
+    max-width: 1200px;
+    width: 100%;
+    height: 100%;
+
+    @include mq(bp3) {
+        border: 13px solid #fff;
+        width: 90%;
+        height: 80%;
+        margin: auto;
+    }
+
+    .c-ratio-image {
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to right bottom, rgba(0,0,0,1) 1%, rgba(0,0,0,.2) 30%, rgba(0,0,0,.2) 75%, rgba(0,0,0,1) 99%);
+        }
+    }
 }
