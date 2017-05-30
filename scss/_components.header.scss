@@ -1,0 +1,25 @@
+/*
+    Components: Header
+    ---
+    The wrapper where the logo/brand and menu resides.
+*/
+
+.c-header {
+    position: relative;
+    width: 100%;
+
+    @include padding-lr(0,0);
+
+    @include mq(bp3) {
+        @include padding-lr(1,1);
+    }
+
+    @include mq(bp4) {
+        @include padding-lr(2,2);
+    }
+
+}
+
+.c-header--home {
+    background-color: palette(color-background);
+}

@@ -51,8 +51,10 @@
 @import '../vendor/chopstick-sass/scss/objects.tables';
 
 /* Components */
+@import 'components.header';
 @import 'components.navigation';
 @import 'components.brand';
+
 @import 'components.row';
 @import 'components.icons';
 @import 'components.symbols';
@@ -78,7 +80,7 @@
 @import '../vendor/chopstick-sass/scss/utilities.spacing';
 @import '../vendor/chopstick-sass/scss/utilities.colors';
 @import '../vendor/chopstick-sass/scss/utilities.layers';
-@import '../vendor/chopstick-sass/scss/utilities.states';
+@import 'utilities.states';
 @import '../vendor/chopstick-sass/scss/utilities.print';
 @import '../vendor/chopstick-sass/scss/utilities.debug';
 

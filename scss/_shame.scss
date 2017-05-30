@@ -3,41 +3,6 @@ Shame
 ---
 Hacks and quick fixes
 */
-.c-header {
-    position: relative;
-    overflow-y: hidden;
-    background-color: palette(color-background, light);
-    width: 100%;
-
-    @include padding-lr(0,0);
-
-    @include mq(bp3) {
-        @include padding-lr(1,1);
-    }
-
-    @include mq(bp4) {
-        @include padding-lr(2,2);
-    }
-
-    &:after {
-        content: '';
-        background-color: palette(color-background,x-light);
-        // width: calc(100% - 4rem);
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        left: 0;
-        // margin-left: 2rem;
-        z-index: -2;
-    }
-}
-
-.c-header--home {
-    background-color: palette(color-background);
-}
-
-
-
 
 .c-card__title {
     color: palette(color-beta, dark);
@@ -241,12 +206,14 @@ Hacks and quick fixes
     background-color: palette(color-background);
 
     @include mq(bp3) {
-        height: calc(100vh - 96px);
+        height: calc(100vh - 80px);
+        // height: calc(100vh - 96px);
         justify-content: space-around;
     }
 
     @include mq(bp5) {
-        height: calc(100vh - 108px);
+        height: calc(100vh - 90px);
+        // height: calc(100vh - 108px);
     }
 }
 

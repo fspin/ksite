@@ -19,7 +19,6 @@ navigation:
   - title: Works
     url: works/
     subpaginas:
-      # - parent: Works
       - subtitle: Creation
         suburl: works-creation/
       - subtitle: Restoration
@@ -27,7 +26,6 @@ navigation:
   - title: Workshop
     url: workshop/
     subpaginas:
-      # - parent: Workshop
       - subtitle: Hand-Tools
         suburl: workshop-hand-tools/
       - subtitle: Finishing-Techniques

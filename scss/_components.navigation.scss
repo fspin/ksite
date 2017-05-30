@@ -6,13 +6,9 @@
 
 .c-nav-main {
     width: 100%;
-    // float: left;
-    display: none;
     font-family: $beta-font-family;
     text-transform: lowercase;
-
     order: 2;
-    // @include margin-top(1);
 
     @include mq(bp1) {
         @include margin-top(0);
@@ -20,24 +16,14 @@
 
     @include mq(bp3) {
         order: 0;
-        display: block;
         width: auto;
-        float: right;
     }
-
-    &.is-visible {
-        display: block;
-    }
-}
-
-.c-nav-subnav {
-    // display: none;
 }
 
     .c-nav-main__list {
         margin-bottom: 0;
         background-color: palette(color-background,x-light);
-
+        z-index: 5;
 
         @include mq(bp1) {
             border-top: 1px dotted palette(color-neutral,light);
@@ -45,35 +31,60 @@
 
         @include mq(bp3) {
             border-top: 0;
-        }
 
-        &.c-nav-sub__list {
-            background-color: palette(color-background,light);
-            z-index: 1;
-
-            @include padding-left(2);
-
-            @include mq(bp3) {
-                float: right;
-            }
-
+            // This is the color bar seen as background of menu
             &:after {
                 content: '';
-                background-color: palette(color-background,light);
-                // width: calc(100% - 4rem);
+                background-color: palette(color-background,x-light);
                 width: 100%;
                 position: absolute;
                 left: 0;
                 height: 50%;
-                // margin-left: 2rem;
+                z-index: -2;
+            }
+
+            .c-home & {
+                background-color: palette(color-background);
+
+                &:after {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .c-nav-sub__list {
+        background-color: palette(color-background,light);
+        z-index: 5;
+
+        @include padding-left(2);
+
+        @include mq(bp3) {
+            float: right;
+
+            // This is the color bar seen as background of submenu
+            &:after {
+                content: '';
+                background-color: palette(color-background,light);
+                width: 100%;
+                position: absolute;
+                left: 0;
+                height: 50%;
                 z-index: -1;
             }
         }
     }
 
+    .c-nav-main--mobile {
+        background-color: palette(color-background);
+        display: none;
+
+        &.is-visible {
+            display: block;
+        }
+    }
+
     .c-nav-main__item {
-        // @include padding-lr(.75,.75);
-        // @include padding-tb(.5,.5);
 
         & + & {
             border-top: 1px dotted palette(color-neutral,light);
@@ -84,7 +95,6 @@
 
             & + & {
                 border-top: 0;
-                // @include margin-lr(2,0);
             }
         }
     }
@@ -115,7 +125,14 @@
             background-color: palette(color-background,light);
         }
 
+        .c-home &:hover,
+        .c-home &:active {
+            background-color: palette(color-background);
+        }
+
+
         .is-selected > & {
+            background-color: palette(color-background,light);
             color: palette(color-alpha);
         }
 
@@ -131,27 +148,23 @@
         }
     }
 
-
+    .c-nav-sub__link{
+        .is-selected > & {
+            background-color: palette(color-background);
+        }
+    }
 
 .c-nav-main-trigger {
     user-select: none;
-    // position: absolute;
-    // top: 2em;
-    // right: 1em;
-    // top: 0;
-    // right: 0;
     position: relative;
     width: 100%;
 
     display: block;
     color: palette(color-alpha);
-    background-color: palette(color-neutral,x-light);
-    // border: 1px solid palette(color-alpha);
+    background-color: palette(color-background,light);
     border: 0;
+    border-top: 1px dashed palette(color-background);
     outline: 0;
-    // border-radius: $radius;
-
-    // @include margin-top(.5);
 
     @include padding-tb(1,1);
 
@@ -167,8 +180,6 @@
         .c-symbol-close {
             display: inline-block;
         }
-        // color: palette(color-neutral,x-light);
-        // background-color: palette(color-alpha);
     }
 
     @include mq(bp3) {
