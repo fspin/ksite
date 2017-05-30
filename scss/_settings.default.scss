@@ -61,8 +61,8 @@ $palettes: (
         x-light                     : rgb(254, 254, 254),
         light                       : rgb(252, 251, 250),
         base                        : $color-background,
-        dark                        : hsl(hue($color-background),20,85),
-        x-dark                      : hsl(hue($color-background),0,10)
+        dark                        : hsl(hue($color-background),15,92),
+        x-dark                      : hsl(hue($color-background),0,15)
     ),
     color-neutral: (
         x-light                     : hsl(hue($color-neutral),0,100),

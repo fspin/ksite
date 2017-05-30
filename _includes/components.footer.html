@@ -1,11 +1,42 @@
 <footer class="c-row c-row--zero">
     <div class="o-container">
-        <div class="o-grid">
-            <div class="o-grid__item">
+        <section class="c-footer o-flex o-flex--wrap">
 
-                <p>Copyright MMXV Chopstick</p>
+            <i class="c-logo c-logo--centered c-logo--white-neg c-footer__logo"></i>
 
-            </div>
-        </div>
+            <p class="c-footer__title o-flex o-flex--vertical o-flex--justify-center">
+                {{ site.title }} <br>
+                <span class="c-footer__tagline">
+                    {% for line in site.description %}
+                        {{ line }}.
+                    {% endfor %}
+                </span>
+            </p>
+
+            <nav class="c-footer__nav o-flex o-flex--align-center">
+                <ul class="o-list">
+                {% for item in site.navigation %}
+
+
+                        {% if item.subpaginas %}
+                            {% for subitem in item.subpaginas %}
+                            <li>
+                                <a href="{{ site.github.url }}/{{ subitem.suburl}}">
+                                    {{ item.title }}. {{ subitem.subtitle }}
+                                </a>
+                            </li>
+                            {% endfor %}
+                        {% else %}
+                        <li>
+                            <a href="{{ site.github.url }}/{{ item.url}}">
+                                {{ item.title }}
+                            </a>
+                        </li>
+                        {% endif %}
+
+                {% endfor %}
+                </ul>
+            </nav>
+        </section>
     </div>
 </footer>

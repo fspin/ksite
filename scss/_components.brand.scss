@@ -38,6 +38,18 @@
     }
 }
 
+    .c-logo--centered {
+        background-position: center;
+    }
+
+    .c-logo--neg {
+        background-image: url('../img/svg/logo-neg.svg');
+    }
+
+    .c-logo--white-neg {
+        background-image: url('../img/svg/logo-white-neg.svg');
+    }
+
     .c-logo__link {
         display: block;
         color: palette(color-beta, dark);
