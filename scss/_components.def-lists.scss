@@ -17,7 +17,7 @@
     @include mq(bp3) {
         left: 0;
         top: 1.25rem;
-        width: 5.5rem;
+        width: 6.5rem;
         text-align: right;
         line-height: 1rem;
         position: relative;
@@ -25,12 +25,11 @@
 }
 
 .c-def-list__description {
-    // margin-left: 2rem;
     @include padding-left(1);
     @include margin-bottom(1);
 
     @include mq(bp3) {
-        @include margin-left(6.75);
+        @include margin-left(7.75);
         @include padding-bottom(0);
         border-left: 1px solid palette(color-background, dark);
     }

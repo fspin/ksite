@@ -1,0 +1,58 @@
+/*
+    Components: Footer
+    ---
+    Components with the currently used items
+*/
+
+.c-footer {
+    background-color: palette(color-background,x-dark);
+
+    @include padding-tb($alpha-leading, $alpha-leading);
+    @include padding-lr($alpha-leading);
+}
+
+.c-footer__logo {
+    @include margin-lr(.25,0);
+}
+
+.c-footer__title {
+    font-family: $beta-font-family;
+    color: palette(color-neutral,light);
+
+    @include text-dimensions($ms2,1,0,.9,.75);
+    @include margin-bottom(0);
+    @include margin-lr(1,0);
+}
+
+    .c-footer__tagline {
+        font-family: $gamma-font-family;
+        @include text-dimensions($ms-1,1);
+    }
+
+.c-footer__nav {
+    flex: 1 auto;
+
+    @include margin-lr(1,0);
+    @include mq(bp3) {
+        justify-content: center;
+    }
+
+    .o-list {
+        @include margin-bottom(0);
+    }
+
+    a {
+        color: palette(color-background);
+
+        &:visited {
+            color: palette(color-background, dark);
+        }
+
+        &:hover {
+            text-decoration: $link-decoration;
+            color: palette(color-background, x-light);
+            border-bottom: 1px dashed palette(color-neutral,dark);
+        }
+    }
+
+}
