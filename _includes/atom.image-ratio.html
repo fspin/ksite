@@ -1,0 +1,10 @@
+{% comment %}
+
+    image
+    title
+    aria-label
+    class
+
+{% endcomment %}
+
+<div class="c-ratio-image{% if include.class %} {{ include.class }}{% endif %}" style="background-image: url('../img/jpg/{{ include.image }}');" role="img" aria-label="{{ include.aria-label }}" title="{{ include.title }}"></div>

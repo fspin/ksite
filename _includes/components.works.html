@@ -1,15 +1,10 @@
 {% comment %}
 
-
     title
     material
     year
     paragraphs
     images
-
-    REQUIRED:
-    OPTIONAL:
-
 
 {% endcomment %}
 
@@ -42,20 +37,20 @@
         </div>
 
         {% if include.images and page.section != 'about' %}
-        <!-- <ul class="o-list c-thumbnails u-push-1-of-2-bp4 u-2-of-5-bp4"> -->
         <ul class="o-list c-thumbnails">
             {% for image in include.images limit:6 %}
             <li class="o-list__item c-thumbnail">
-                <!-- <div class="c-thumbnail__wrapper">
-                    <div class="c-background-image c-thumbnail__img" style="background-image: url('../img/jpg/{{ image }}');" role="img" aria-label="Image number {{ forloop.index }} of {{ include.title }}" title="{{ include.title }}">
-                    </div>
-                </div> -->
-                {% include molecules.image-ratio.html
+                <div class="c-thumbnail__wrapper">
 
-                    image=image
-                    title=include.title
-                    aria-label=include.title
-                %}
+                    {% include atom.image-ratio.html
+
+                        image=image
+                        title=include.title
+                        aria-label=include.title
+                        class='c-thumbnail__img'
+                    %}
+                </div>
+
             </li>
             {% endfor %}
         </ul>
@@ -64,16 +59,14 @@
     </div>
 
     {% if include.resume %}
-    <div class="c-work__text c-work__text-left c-work__text-resume">
-        <div class="c-card">
-            <h3 class="c-card__title">{{ include.resume-title | capitalize }}</h3>
-            <dl class="c-resume">
-                {% for item in include.resume %}
-                    <dt class="c-resume__year">{{ item.year }}</dt>
-                    <dd class="c-resume__description">{{ item.description }}</dd>
-                {% endfor %}
-            </dl>
-        </div>
-    </div>
+
+        {% include molecules.resume.html
+
+            resume-title=include.resume-title
+            resume=include.resume
+
+        %}
+
     {% endif %}
+
 </section>

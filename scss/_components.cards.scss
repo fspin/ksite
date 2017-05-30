@@ -16,6 +16,27 @@
         margin-bottom: 0;
     }
 
+
+    .c-card__title {
+        color: palette(color-beta, dark);
+        margin-bottom: 0;
+    }
+
+    .c-card__meta {
+        margin-bottom: 1.2rem;
+        color: palette(color-beta);
+
+        ul {
+            @include text-dimensions($small-font-size, $small-line-height);
+            margin-bottom: 0;
+        }
+    }
+
+    .c-card__description {
+        margin-bottom: 1rem;
+    }
+
+
 .c-card--alpha {
     color: palette(color-neutral,dark);
     background-color: palette(color-neutral,x-light);

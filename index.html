@@ -1,6 +1,6 @@
 ---
 layout: sticked-footer
-title: Homepage
+title: Kenta Takeshige
 section: home
 ---
 
@@ -17,8 +17,12 @@ section: home
             </header>
 
             <div class="c-hero__image">
-                <div class="c-ratio-image" style="background-image: url('../img/jpg/bg.jpg');" role="img" aria-label="{{ page.title }}" title="{{ page.title }}">
-                </div>
+                {% include atom.image-ratio.html
+
+                    image='bg.jpg'
+                    title=page.title
+                    aria-label=page.title
+                %}
             </div>
 
 

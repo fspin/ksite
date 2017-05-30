@@ -1,0 +1,25 @@
+/*
+    Components: Thumbnails
+    ---
+    Used for the photo gallery
+*/
+
+.c-thumbnails {
+    flex-wrap: wrap;
+    display: flex;
+    width: 100%;
+}
+
+.c-thumbnail {
+    width: 29%;
+    margin-left: 3%;
+    max-width: 155px;
+}
+
+.c-thumbnail__wrapper {
+    position: relative;
+    padding-bottom: 60%;
+    height: 0;
+    margin-bottom: 10px;
+    border: 7px solid #fff;
+}

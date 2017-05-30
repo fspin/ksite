@@ -1,0 +1,19 @@
+{% comment %}
+
+    image
+    title
+    aria-label
+
+{% endcomment %}
+
+<div class="c-work__text c-work__text-left c-work__text-resume">
+    <div class="c-card">
+        <h3 class="c-card__title">{{ include.resume-title | capitalize }}</h3>
+        <dl class="c-def-list">
+            {% for item in include.resume %}
+                <dt class="c-def-list__title">{{ item.year }}</dt>
+                <dd class="c-def-list__description">{{ item.description }}</dd>
+            {% endfor %}
+        </dl>
+    </div>
+</div>

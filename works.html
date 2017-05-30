@@ -5,17 +5,18 @@ sub-page:
 section: portfolio
 ---
 
-<!-- <main class="c-row c-row--zero o-flex--grow-one o-flex"> -->
 <main class="c-row c-row--zero c-content">
-    <!-- <div class="o-container"> -->
     <div class="o-container">
-        <div class="c-hero">
-        <!-- <div class="o-flex--grow-one c-content__body o-flex o-flex--justify-center o-flex--align-center"> -->
+        <div class="c-hero c-hero--portfolio">
 
-            {%
-                include molecules.image-ratio.html
-                image = 'works.jpg'
-            %}
+            <div class="c-hero__image">
+                {% include atom.image-ratio.html
+
+                    image='works.jpg'
+                    title=page.title
+                    aria-label=page.title
+                %}
+            </div>
 
         </div>
     </div>

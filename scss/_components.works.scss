@@ -18,9 +18,7 @@
         transform: translateX(-50%);
         width: 60%;
 
-        // @include mq(bp3, max) {
         border-top: 1px dashed  palette(color-background, dark);
-        // }
     }
 }
 
@@ -119,15 +117,6 @@
             margin-right: -15%;
             margin-left: 15%;
         }
-
-        // @include margin-lr(4.5,-4.5);
-        // margin-left: 15%;
-        // margin-right: -15%;
-        //
-        // @include mq(bp5, max) {
-        //     @include margin-lr(4.5,0);
-        //     border: 1px solid red;
-        // }
     }
 
     .c-work__form-right {
@@ -177,14 +166,6 @@
             margin-right: -7%;
             margin-left: 7%;
         }
-        // @include padding-lr(4,2);
-        //
-        // @include mq(bp3, max) {
-        //     @include padding-lr(0,0);
-        //
-        //     width: 100%;
-        //     order: 0;
-        // }
 
         &.c-work__text-resume {
             width: 100%;

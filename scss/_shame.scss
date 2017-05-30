@@ -4,143 +4,6 @@ Shame
 Hacks and quick fixes
 */
 
-.c-card__title {
-    color: palette(color-beta, dark);
-    margin-bottom: 0;
-}
-
-.c-card__meta {
-    margin-bottom: 1.2rem;
-    color: palette(color-beta);
-
-    ul {
-        @include text-dimensions($small-font-size, $small-line-height);
-        margin-bottom: 0;
-    }
-}
-
-.c-card__description {
-    margin-bottom: 1rem;
-}
-
-
-
-
-.c-thumbnails {
-    flex-wrap: wrap;
-    display: flex;
-    width: 100%;
-}
-
-.c-thumbnail {
-    width: 29%;
-    margin-left: 3%;
-    max-width: 155px;
-}
-
-
-.c-thumbnail__wrapper {
-    position: relative;
-    padding-bottom: 60%;
-    height: 0;
-    margin-bottom: 10px;
-    border: 7px solid #fff;
-
-    // &.u-centered-image {
-    //     min-width: 300px;
-    //     width: 80%;
-    //     max-width: 1200px;
-    //     margin-top: 1rem;
-    //     margin-bottom: 1rem;
-    //     padding-bottom: 45%;
-    // }
-    //
-    // &.c-home--image {
-    //     height: 95%;
-    //     width: 95%;
-    //     padding-bottom: 0;
-    // }
-}
-
-    // .c-border-white {
-    //     border: 15px solid white;
-    //     // min-height: auto;
-    //     height: 90%;
-    //     width: 90%;
-    //     display: block;
-    //     position: absolute;
-    //     // right: 0;
-    //     top: 50%;
-    //     left: 50%;
-    //     transform: translate(-50%, -50%);
-    //     background-image: url('../img/jpg/bg.jpg');
-    //     background-size: cover;
-    //     background-position: center;
-    //     background-repeat: no-repeat;
-    //     // -webkit-backface-visibility: hidden;
-    //
-    //     &:before {
-    //         content: '';
-    //         position: absolute;
-    //         top: 0;
-    //         left: 0;
-    //         width: 100%;
-    //         height: 100%;
-    //         // border: 20px solid white;
-    //         background: linear-gradient(to right bottom, rgba(0,0,0,1) 1%, rgba(0,0,0,.2) 30%, rgba(0,0,0,.2) 75%, rgba(0,0,0,1) 99%);
-    //     }
-    // }
-
-    // .c-hero__image {
-    // }
-
-// .c-hero__image {
-// .c-thumbnail__img {
-.c-ratio-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-
-    padding: 3%;
-    background: #fff;
-    background-size: cover;
-    background-position: center;
-}
-
-.c-resume {
-    @include margin-tb(2,2);
-    padding: 0;
-}
-
-.c-resume__year {
-    font-family: $mono-font-family;
-    @include text-dimensions($ms1);
-    color: palette(color-gamma);
-
-    @include mq(bp3) {
-        left: 0;
-        top: 1.25rem;
-        width: 5.5rem;
-        text-align: right;
-        line-height: 1rem;
-        position: relative;
-    }
-}
-
-.c-resume__description {
-    // margin-left: 2rem;
-    @include padding-left(1);
-    @include margin-bottom(1);
-
-    @include mq(bp3) {
-        @include margin-left(6.75);
-        @include padding-bottom(0);
-        border-left: 1px solid palette(color-background, dark);
-    }
-}
-
 .u-max-w-650 {
     width: 100%;
     max-width: 650px;
@@ -150,13 +13,13 @@ Hacks and quick fixes
     width: 80%;
 }
 
-.c-wrapper {
-    height: 0;
-    min-height: 100%;
-
-    // ie
-    overflow: hidden;
-}
+// .c-wrapper {
+//     height: 0;
+//     min-height: 100%;
+//
+//     // ie
+//     overflow: hidden;
+// }
 
     // .c-content__body,
     // .u-bg-main-color {
@@ -217,14 +80,11 @@ Hacks and quick fixes
     }
 }
 
-// .c-header-home {
-//     @media screen and (orientation: portrait) {
-//         @include mq(bp3,max) {
-//             width: 100%;
-//             z-index: 10;
-//         }
-//     }
-// }
+
+.c-hero--portfolio {
+    min-height: 250px;
+    height: calc(100vh - 160px);
+}
 
 
 .c-hero__title {

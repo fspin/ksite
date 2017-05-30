@@ -16,7 +16,10 @@
     @include mq(bp1) {
         @include padding-lr($columns-gutter,$columns-gutter);
     }
+}
 
+.c-row--portfolio {
+    overflow-x: hidden;
 }
 
 .c-row--alpha {

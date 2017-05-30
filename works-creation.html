@@ -6,12 +6,7 @@ section: portfolio
 ---
 {% assign creation = site.data.works.creation | reverse %}
 
-{% comment %}
-{% for work in creation %}
-    <p>{{ work.title }} - {{ work.year }}</p>
-{% endfor %}
-{% endcomment %}
-<main class="c-row c-row--zero">
+<main class="c-row c-row--zero c-row--portfolio">
     <div class="o-container">
 
         {% for work in creation limit:9 %}

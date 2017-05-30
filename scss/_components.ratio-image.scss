@@ -1,0 +1,18 @@
+/*
+    Components: Ratio Image
+    ---
+    The basic to add an image preserving it ratio, as a div's background.
+*/
+
+.c-ratio-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    padding: 3%;
+    background: #fff;
+    background-size: cover;
+    background-position: center;
+}
