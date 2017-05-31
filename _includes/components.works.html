@@ -13,7 +13,7 @@
         <div class="c-card c-card--alpha c-card--img">
             {% if include.images %}
             <p class="o-media">
-                <img src="{{ site.url }}/img/jpg/{{ include.images | first }}" alt="{{ include.title }}, {{ include.year }}" class="o-media--img{% if include.resume %} u-max-w-650{% endif %}">
+                <img src="{{ site.github.url }}/img/jpg/{{ include.images | first }}" alt="{{ include.title }}, {{ include.year }}" class="o-media--img{% if include.resume %} u-max-w-650{% endif %}">
             </p>
             {% endif %}
         </div>

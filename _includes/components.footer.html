@@ -21,14 +21,14 @@
                         {% if item.subpaginas %}
                             {% for subitem in item.subpaginas %}
                             <li>
-                                <a href="{{ site.url }}/{{ subitem.suburl}}">
+                                <a href="{{ site.github.url }}/{{ subitem.suburl}}">
                                     {{ item.title }}. {{ subitem.subtitle }}
                                 </a>
                             </li>
                             {% endfor %}
                         {% else %}
                         <li>
-                            <a href="{{ site.url }}/{{ item.url}}">
+                            <a href="{{ site.github.url }}/{{ item.url}}">
                                 {{ item.title }}
                             </a>
                         </li>
