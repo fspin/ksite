@@ -42,7 +42,7 @@
                 <ul class="o-list c-nav-main__list c-nav-sub__list">
                     {% for subitem in item.subpaginas %}
                         <li class="c-nav-main__item c-nav-sub__item {% if page.url contains subitem.suburl %} is-selected{% endif %}">
-                            <a href="{{ site.github.url}}/{{ subitem.suburl }}" class="c-nav-main__link c-nav-sub__link">
+                            <a href="{{ site.github.url }}/{{ subitem.suburl }}" class="c-nav-main__link c-nav-sub__link">
                                 {{ subitem.subtitle }}
                             </a>
                         </li>
