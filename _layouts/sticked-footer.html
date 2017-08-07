@@ -13,7 +13,11 @@
     {% include components.header.html %}
     <!-- End page header -->
 
-    {{ content }}
+    <!-- <div id="barba-wrapper"{% if page.section == 'home' %} class="c-content"{% endif%}>
+        <div class="barba-container"> -->
+            {{ content }}
+    <!-- </div>
+    </div> -->
 
     <!-- Footer javascript -->
     {% include generic.javascript.html %}

@@ -33,6 +33,7 @@
   "dependencies": {
     "chopstick-sass": "^1.0.1",
     "jquery": "^3.2.1",
-    "svgxuse": "^1.2.4"
+    "svgxuse": "^1.2.4",
+    "barba.js": "^1.0.0"
   }
 }
