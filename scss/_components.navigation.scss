@@ -99,20 +99,6 @@
         }
     }
 
-    // .c-nav-main__text {
-    //     position: relative;
-    //
-    //     &:after {
-    //         content: '';
-    //         width: 100%;
-    //         left: 50%;
-    //         transform: translateX(-50%) scaleX(0);
-    //         transition: all .25s;
-    //         border-bottom: 5px solid transparent;
-    //         bottom: -5px;
-    //     }
-    // }
-
     .c-nav-main__link {
         display: block;
         color: palette(color-gamma);
@@ -145,20 +131,6 @@
             text-decoration: none;
             color: palette(color-beta,dark);
             background-position: left bottom;
-
-            // .c-nav-main__text {
-            //     &:after {
-            //         content: '';
-            //         position: absolute;
-            //         width: 100%;
-            //         transform: translateX(-50%) scaleX(1);
-            //         left: 50%;
-            //         // bottom: -10px;
-            //         // border-bottom: 1px solid palette(color-beta);
-            //         bottom: -5px;
-            //         border-bottom: 5px solid palette(color-beta,dark);
-            //     }
-            // }
         }
 
         .c-home & {
@@ -179,14 +151,6 @@
             background-color: palette(color-background,light);
             color: palette(color-alpha);
         }
-
-        // .is-selected > &:hover {
-        //     .c-nav-main__text {
-        //         &:after {
-        //             border-bottom: 0;
-        //         }
-        //     }
-        // }
 
         .c-nav-main--home & {
             color: palette(color-beta,dark);
@@ -214,10 +178,6 @@
         &:active {
             background-position: left bottom;
         }
-
-        // :not(.is-selected) > &:hover {
-        //     box-shadow: -3px 0 14px -10px; // -1px 0 12px -9px;
-        // }
 
     }
 
