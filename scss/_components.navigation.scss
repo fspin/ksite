@@ -99,11 +99,33 @@
         }
     }
 
+    // .c-nav-main__text {
+    //     position: relative;
+    //
+    //     &:after {
+    //         content: '';
+    //         width: 100%;
+    //         left: 50%;
+    //         transform: translateX(-50%) scaleX(0);
+    //         transition: all .25s;
+    //         border-bottom: 5px solid transparent;
+    //         bottom: -5px;
+    //     }
+    // }
+
     .c-nav-main__link {
         display: block;
         color: palette(color-gamma);
         text-decoration: none;
         font-weight: $alpha-font-weight;
+
+        background: palette(color-background,x-light);
+        background: linear-gradient(to top, palette(color-background,light) 50%, palette(color-background, x-light) 50%);
+
+        background-size: 100% 200%;
+        background-position: left top;
+        transition: all .25s ease;
+
         @include text-dimensions($alpha-font-size,1,0,.25,.25);
 
         @include padding-lr(.75,.75);
@@ -122,12 +144,34 @@
         &:active {
             text-decoration: none;
             color: palette(color-beta,dark);
-            background-color: palette(color-background,light);
+            background-position: left bottom;
+
+            // .c-nav-main__text {
+            //     &:after {
+            //         content: '';
+            //         position: absolute;
+            //         width: 100%;
+            //         transform: translateX(-50%) scaleX(1);
+            //         left: 50%;
+            //         // bottom: -10px;
+            //         // border-bottom: 1px solid palette(color-beta);
+            //         bottom: -5px;
+            //         border-bottom: 5px solid palette(color-beta,dark);
+            //     }
+            // }
+        }
+
+        .c-home & {
+            background: palette(color-background, light);
+            background: linear-gradient(to bottom, palette(color-background) 50%, palette(color-background, light) 50%);
+            background-size: 100% 200%;
+            background-position: left bottom;
+            transition: all .25s ease;
         }
 
         .c-home &:hover,
         .c-home &:active {
-            background-color: palette(color-background);
+            background-position: left top;
         }
 
 
@@ -135,6 +179,14 @@
             background-color: palette(color-background,light);
             color: palette(color-alpha);
         }
+
+        // .is-selected > &:hover {
+        //     .c-nav-main__text {
+        //         &:after {
+        //             border-bottom: 0;
+        //         }
+        //     }
+        // }
 
         .c-nav-main--home & {
             color: palette(color-beta,dark);
@@ -148,10 +200,25 @@
         }
     }
 
+
+
     .c-nav-sub__link {
-        .is-selected > & {
-            background-color: palette(color-background);
+        background: palette(color-background,x-light);
+        background: linear-gradient(to top, palette(color-background) 50%, palette(color-background, light) 50%);
+        background-size: 100% 200%;
+        background-position: left top;
+        transition: all .25s ease;
+
+        .is-selected > &,
+        &:hover,
+        &:active {
+            background-position: left bottom;
         }
+
+        // :not(.is-selected) > &:hover {
+        //     box-shadow: -3px 0 14px -10px; // -1px 0 12px -9px;
+        // }
+
     }
 
 .c-nav-main-trigger {

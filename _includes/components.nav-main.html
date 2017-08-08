@@ -1,4 +1,5 @@
 <nav class="c-nav-main o-flex o-flex--vertical">
+    <!-- Mobile navigation -->
     <ul class="o-list c-nav-main__list c-nav-main--mobile js-nav is-hidden-from-bp3">
         <!-- Define your site navigation in _config.yml -->
         {% for item in site.navigation %}
@@ -24,12 +25,13 @@
         {% endfor %}
     </ul>
 
+    <!-- Desktop navigation -->
     <ul class="o-list c-nav-main__list is-hidden-until-bp3">
         {% for item in site.navigation %}
 
         <li class="c-nav-main__item{% if page.url contains item.url or page.title == item.title %} is-selected{% endif %}">
             <a href="{{ site.github.url }}/{{ item.url }}" class="c-nav-main__link">
-                {{ item.title }}
+                <span class="c-nav-main__text">{{ item.title }}</span>
             </a>
         </li>
         {% endfor %}
