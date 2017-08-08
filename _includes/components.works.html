@@ -11,7 +11,24 @@
 <section class="c-work o-flex o-flex--wrap o-flex--align-center">
     <div class="c-work__img {% if thecycle == 'odd' %}c-work__img-left {% else %}c-work__img-right {{ include.class-flex-start }} {% endif %}u-1-of-2-bp4">
         <div class="c-card c-card--alpha c-card--img">
-            {% if include.images %}
+            {% unless include.resume %}
+                {% capture image %}{{ include.images | first }}{% endcapture %}
+                {% if include.images %}
+
+                <div class="c-ratio__wrapper">
+                    {% include atom.image-ratio.html
+
+                        image=image
+                        title=include.title
+                        aria-label=include.title
+
+                    %}
+                </div>
+                {% endif %}
+
+            {% endunless %}
+
+            {% if include.resume %}
             <p class="o-media">
                 <img src="{{ site.github.url }}/img/jpg/{{ include.images | first }}" alt="{{ include.title }}, {{ include.year }}" class="o-media--img{% if include.resume %} u-max-w-650{% endif %}">
             </p>
@@ -21,6 +38,7 @@
 
     <div class="c-work__text {% if thecycle == 'odd' %}c-work__text-right {% else %}c-work__text-left {% endif %}u-1-of-2-bp4">
         <div class="c-card">
+
             {% if include.title %}
             <h2 class="c-card__title">{{ include.title }}</h2>
             <div class="c-card__meta">
@@ -47,7 +65,6 @@
                         image=image
                         title=include.title
                         aria-label=include.title
-                        class='c-thumbnail__img'
                     %}
                 </div>
 
