@@ -52,15 +52,7 @@
 .c-card--img {
     margin-bottom: 0;
 
-    // img {
-    //     max-height: 336px;
-    // }
-
     @include mq(bp3, max) {
         @include padding-lr(0);
-
-        // img {
-        //     max-height: 100%;
-        // }
     }
 }

@@ -13,6 +13,14 @@ Hacks and quick fixes
     width: 80%;
 }
 
+.c-form__field {
+    position: relative;
+    margin-top: 1.7rem;
+
+    & ~ & {
+        margin-top: 2.75rem;
+    }
+}
 
 // Home
 .c-home {

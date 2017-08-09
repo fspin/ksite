@@ -26,26 +26,25 @@ section: contact
                         <form action="#" method="post" class="c-form">
                             <fieldset>
 
-                                <p>
-                                    <label for="form-field-1" class="c-label">
-                                        {{ item.form-fields.name | capitalize }}
-                                    </label>
+                                <p class="c-form__field">
                                     <input id="form-field-1" type="text" class="c-input-text c-input-text--md" placeholder="{{ item.form-fields.name | capitalize }}" required />
+                                    <label for="form-field-1" class="c-label c-input-label__underline">
+                                        <span>{{ item.form-fields.name | capitalize }}</span>
+                                    </label>
                                 </p>
 
-                                <p>
-                                    <label for="form-field-2" class="c-label">
-                                        {{ item.form-fields.email | capitalize }}
-                                    </label>
+                                <p class="c-form__field">
                                     <input id="form-field-2" class="c-input-text c-input-text--md" type="email" placeholder="email@address.com" required />
+                                    <label for="form-field-2" class="c-label c-input-label__underline">
+                                        <span>{{ item.form-fields.email | capitalize }}</span>
+                                    </label>
                                 </p>
 
-                                <p>
-                                    <label for="form-field-3" class="c-label">
-                                        {{ item.form-fields.message | capitalize }}
-                                    </label>
-
+                                <p class="c-form__field">
                                     <textarea class="c-input-text c-input-text--md" id="form-field-3" rows="8" required></textarea>
+                                    <label for="form-field-3" class="c-label c-input-label__underline c-input-textarea__underline">
+                                        <span>{{ item.form-fields.message | capitalize }}</span>
+                                    </label>
                                 </p>
 
                                 <p>

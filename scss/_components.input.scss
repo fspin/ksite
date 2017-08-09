@@ -21,7 +21,7 @@
     background-color: palette(color-neutral,x-light);
     border-radius: $radius-zero;
     border: 0;
-    border-bottom: $border-width $border-style palette(color-background, dark);
+    // border-bottom: $border-width $border-style palette(color-background, dark);
     color: palette(color-neutral,dark);
     font-family: $alpha-font-family;
     margin: 0;
@@ -30,21 +30,50 @@
     outline: none;
     line-height: normal;
 
-    &:focus {
-        color: palette(color-neutral,dark);
-        border-color: palette(color-alpha);
-        // box-shadow: 0 0 2px palette(color-alpha,x-light);
+    & + .c-input-label__underline {
+        position: absolute;
+        top: -30px;
+        height: calc(100% + 1.7rem);
+        top: -1.7rem;
+
+        span {
+            display: block;
+            position: absolute;
+        }
+
+        &:before {
+            content: "";
+            position: absolute;
+            overflow: hidden;
+
+            left: 0;
+            width: 0;
+            height: 100%;
+            border-bottom: $border-width $border-style palette(color-alpha);
+
+            transition: width $animation-duration-beta $animation-easing-alpha;
+        }
     }
+
+    &:focus,
+    &:active {
+        & + .c-input-label__underline {
+            &:before {
+                width: 100%;
+            }
+        }
+    }
+
 
     &.has-error {
         border: 1px solid palette(color-error);
 
         &:focus {
             border-color: palette(color-error);
-            // box-shadow: 0 0 2px palette(color-error,x-light);
         }
     }
 }
+
 
 // Input sizes
 .c-input-text--sm {

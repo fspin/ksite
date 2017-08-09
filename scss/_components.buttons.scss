@@ -111,12 +111,12 @@
 
     &:hover,
     &:focus {
-        background-color: palette(color-alpha,light);
+        background-color: palette(color-alpha,dark);
         color: palette(color-neutral,x-light);
     }
 
     &:active {
-        background-color: palette(color-alpha);
+        background-color: palette(color-alpha,x-dark);
     }
 
 }

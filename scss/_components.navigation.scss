@@ -110,7 +110,7 @@
 
         background-size: 100% 200%;
         background-position: left top;
-        transition: all .25s ease;
+        transition: all $animation-duration-beta $animation-easing-alpha;
 
         @include text-dimensions($alpha-font-size,1,0,.25,.25);
 
@@ -138,7 +138,7 @@
             background: linear-gradient(to bottom, palette(color-background) 50%, palette(color-background, light) 50%);
             background-size: 100% 200%;
             background-position: left bottom;
-            transition: all .25s ease;
+            transition: all $animation-duration-beta $animation-easing-alpha;
         }
 
         .c-home &:hover,
@@ -171,7 +171,7 @@
         background: linear-gradient(to top, palette(color-background) 50%, palette(color-background, light) 50%);
         background-size: 100% 200%;
         background-position: left top;
-        transition: all .25s ease;
+        transition: all $animation-duration-beta $animation-easing-alpha;
 
         .is-selected > &,
         &:hover,
