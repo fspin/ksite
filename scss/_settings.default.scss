@@ -185,7 +185,8 @@ $breakpoints: (
     bp4                             : 960/16*1em,
     // bp5                             : 1140/16*1em,
     bp5                             : 1200/16*1em,
-    bp6                             : 1600/16*1em
+    bp6                             : 1600/16*1em,
+    maxwidth                        : 1400/16*1em
 ) !default;
 
 // ---
@@ -367,7 +368,7 @@ $caption-padding-bottom             : $alpha-leading !default;
 // Grid
 // ---
 
-$grid-max-width                     : map-get($breakpoints,bp4) !default;
+$grid-max-width                     : map-get($breakpoints,maxwidth) !default;
 $grid-gutter                        : $columns-gutter !default;
 
 // ---

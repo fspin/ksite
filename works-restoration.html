@@ -10,6 +10,10 @@ section: portfolio
 {% for work in restoration %}
     <p>{{ work.title }} - {{ work.year }}</p>
 {% endfor %}
+
+{% for work in restoration limit:3 %}
+{% endfor %}
+
 {% endcomment %}
 <main class="c-row c-row--zero c-row--portfolio">
     <div class="o-container">
@@ -27,6 +31,8 @@ section: portfolio
                images=work.images
             %}
         {% endfor %}
+
+        {% include components.pagination.html %}
 
 
     </div>

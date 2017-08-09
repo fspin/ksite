@@ -10,6 +10,7 @@ section: portfolio
     <div class="o-container">
 
         {% for work in creation limit:3 %}
+
         {% capture thecycle %}{% cycle 'odd', 'even' %}{% endcapture %}
 
             {%
@@ -23,6 +24,7 @@ section: portfolio
             %}
         {% endfor %}
 
+        {% include components.pagination.html %}
 
     </div>
 </main>

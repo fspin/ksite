@@ -172,3 +172,9 @@
             order: 5;
         }
     }
+
+    .c-work__text-left-beta {
+        @include mq(bp3) {
+            width: 100%;
+        }
+    }

@@ -9,18 +9,19 @@
 {% endcomment %}
 
 <section class="c-work o-flex o-flex--wrap o-flex--align-center">
+    {% if include.images %}
     <div class="c-work__img {% if thecycle == 'odd' %}c-work__img-left {% else %}c-work__img-right {{ include.class-flex-start }} {% endif %}u-1-of-2-bp4">
         <div class="c-card c-card--alpha c-card--img">
 
             {% unless include.resume %}
-                {% capture image %}{{ include.images | first }}{% endcapture %}
+                {% capture first-image %}{{ include.images | first }}{% endcapture %}
 
                 {% if include.images %}
 
                 <div class="c-ratio__wrapper">
                     {% include atom.image-ratio.html
 
-                        image=image
+                        image=first-image
                         title=include.title
                         aria-label=include.title
 
@@ -37,43 +38,79 @@
 
         </div>
     </div>
+    {% endif %}
 
-    <div class="c-work__text {% if thecycle == 'odd' %}c-work__text-right {% else %}c-work__text-left {% endif %}u-1-of-2-bp4">
-        <div class="c-card">
+    {% if include.images %}
+        <div class="c-work__text {% if thecycle == 'odd' %} c-work__text-right{% else %} c-work__text-left{% endif %} u-1-of-2-bp4">
+    {% else %}
+        <div class="c-work__text c-work__text-left c-work__text-left-beta">
+    {% endif %}
+            <div class="c-card">
 
-            {% if include.title %}
-            <h2 class="c-card__title">{{ include.title }}</h2>
-            <div class="c-card__meta">
-                <ul class="o-list">
-                    {% if include.material != null %}<li class="o-list__item">Material: {{ include.material }}</li>{% endif %}
-                    <li class="o-list__item">{{ include.year }}</li>
-                </ul>
+                {% if include.title %}
+                <h2 class="c-card__title">{{ include.title }}</h2>
+                <div class="c-card__meta">
+                    <ul class="o-list">
+                        {% if include.material != null %}<li class="o-list__item">Material: {{ include.material }}</li>{% endif %}
+                        <li class="o-list__item">{{ include.year }}</li>
+                    </ul>
+                </div>
+                {% endif %}
+
+
+
+
+                {% unless include.resume or page.title == "Workshop" %}
+                    {% for paragraph in include.paragraphs %}
+                        {% if include.paragraphs.size == 1 %}
+                            <p class="c-card__description">{{ paragraph | truncate: 200 }}</p>
+                            {% if paragraph.size >= 200 %}
+                                <a href="#!">Read more...</a>
+                                {% break %}
+                            {% endif %}
+                        {% elsif forloop.index == 3 %}
+                            <a href="#!">Read more...</a>
+                            {% break %}
+                        {% else %}
+                            {% if forloop.index >= 1 %}
+                                <p class="c-card__description">{{ paragraph | truncate: 200 }}</p>
+                                {% if paragraph.size >= 200 %}
+                                    <a href="#!">Read more...</a>
+                                    {% break %}
+                                {% endif %}
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+                {% endunless %}
+
+                {% if include.resume or page.title == "Workshop" %}
+                    {% for paragraph in include.paragraphs %}
+                        <p class="c-card__description">{{ paragraph }}</p>
+                    {% endfor %}
+                {% endif %}
+
             </div>
+
+            {% if include.images.size > 1 and page.section != 'about' %}
+            <ul class="o-list c-thumbnails">
+
+                {% for image in include.images limit:6 %}
+                    <li class="o-list__item c-thumbnail">
+                        <div class="c-thumbnail__wrapper">
+
+                            {% include atom.image-ratio.html
+
+                                image=image
+                                title=include.title
+                                aria-label=include.title
+                            %}
+                        </div>
+
+                    </li>
+                {% endfor %}
+            </ul>
             {% endif %}
 
-            {% for paragraph in include.paragraphs %}
-                <p class="c-card__description">{{ paragraph }}</p>
-            {% endfor %}
-        </div>
-
-        {% if include.images and page.section != 'about' %}
-        <ul class="o-list c-thumbnails">
-            {% for image in include.images limit:6 %}
-            <li class="o-list__item c-thumbnail">
-                <div class="c-thumbnail__wrapper">
-
-                    {% include atom.image-ratio.html
-
-                        image=image
-                        title=include.title
-                        aria-label=include.title
-                    %}
-                </div>
-
-            </li>
-            {% endfor %}
-        </ul>
-        {% endif %}
 
     </div>
 
@@ -87,5 +124,6 @@
         %}
 
     {% endif %}
+
 
 </section>

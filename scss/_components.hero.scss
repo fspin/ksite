@@ -29,8 +29,19 @@
 
 .c-hero--portfolio {
     min-height: 250px;
-    height: calc(100vh - 180px);
+    height: calc(100vh - 137px);
+
+    @include mq(bp3) {
+        min-height: 250px;
+        height: calc(100vh - 160px);
+    }
+
+    @include mq(bp5) {
+        min-height: 250px;
+        height: calc(100vh - 180px);
+    }
 }
+
 
 
 .c-hero__title {
