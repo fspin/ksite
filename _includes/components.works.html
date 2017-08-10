@@ -9,6 +9,9 @@
 {% endcomment %}
 
 <section class="c-work o-flex o-flex--wrap o-flex--align-center">
+{% comment %}
+	big images
+{% endcomment %}
     {% if include.images %}
     <div class="c-work__img {% if thecycle == 'odd' %}c-work__img-left {% else %}c-work__img-right {{ include.class-flex-start }} {% endif %}u-1-of-2-bp4">
         <div class="c-card c-card--alpha c-card--img">
@@ -40,12 +43,40 @@
     </div>
     {% endif %}
 
+{% comment %}
+	text / content
+{% endcomment %}
+
+{% comment %}
+<div class="sidebar-box">
+<p>malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+<p class="read-more"><a href="#" class="button">Read More</a></p>
+</div>
+
+
+.sidebar-box {
+  max-height: 120px;
+  position: relative;
+  overflow: hidden;
+}
+.sidebar-box .read-more {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  margin: 0; padding: 30px 0;
+
+  /* "transparent" only works here because == rgba(0,0,0,0) */
+  background-image: linear-gradient(to bottom, transparent, black);
+}
+{% endcomment %}
     {% if include.images %}
         <div class="c-work__text {% if thecycle == 'odd' %} c-work__text-right{% else %} c-work__text-left{% endif %} u-1-of-2-bp4">
     {% else %}
         <div class="c-work__text c-work__text-left c-work__text-left-beta">
     {% endif %}
-            <div class="c-card">
+            <div class="c-card c-card__expandable">
 
                 {% if include.title %}
                 <h2 class="c-card__title">{{ include.title }}</h2>
@@ -57,10 +88,9 @@
                 </div>
                 {% endif %}
 
-
-
-
                 {% unless include.resume or page.title == "Workshop" %}
+                    {% comment %}
+
                     {% for paragraph in include.paragraphs %}
                         {% if include.paragraphs.size == 1 %}
                             <p class="c-card__description">{{ paragraph | truncate: 200 }}</p>
@@ -81,6 +111,9 @@
                             {% endif %}
                         {% endif %}
                     {% endfor %}
+                    {% endcomment %}
+
+                    <p class="c-card__description">{{ paragraph }}</p>
                 {% endunless %}
 
                 {% if include.resume or page.title == "Workshop" %}
