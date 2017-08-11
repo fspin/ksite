@@ -46,37 +46,40 @@
 {% comment %}
 	text / content
 {% endcomment %}
-
-{% comment %}
-<div class="sidebar-box">
-<p>malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-<p class="read-more"><a href="#" class="button">Read More</a></p>
-</div>
-
-
-.sidebar-box {
-  max-height: 120px;
-  position: relative;
-  overflow: hidden;
-}
-.sidebar-box .read-more {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  text-align: center;
-  margin: 0; padding: 30px 0;
-
-  /* "transparent" only works here because == rgba(0,0,0,0) */
-  background-image: linear-gradient(to bottom, transparent, black);
-}
-{% endcomment %}
     {% if include.images %}
         <div class="c-work__text {% if thecycle == 'odd' %} c-work__text-right{% else %} c-work__text-left{% endif %} u-1-of-2-bp4">
     {% else %}
         <div class="c-work__text c-work__text-left c-work__text-left-beta">
     {% endif %}
-            <div class="c-card c-card__expandable">
+
+            {% assign make-expandable = false %}
+
+            {% for paragraph in include.paragraphs %}
+                {% comment %} if there is 1 paragraph, control its not bigger than 320 char, otherwise: out {% endcomment %}
+                {% if include.paragraphs.size == 1 %}
+                    {% if paragraph.size >= 330 %}
+                        {% assign make-expandable = true %}
+                        {% break %}
+                    {% endif %}
+                {% comment %} or if this is the third paragraph: out {% endcomment %}
+                {% elsif forloop.index == 3 %}
+                    {% assign make-expandable = true %}
+                    {% break %}
+                {% else %}
+                {% comment %} lastly if its not the first paragraph, and it contains more than 300 chars: out {% endcomment %}
+                    {% if forloop.index >= 1 %}
+                        {% if include.paragraphs[0].size >= 200 and paragraph.size >= 100 %}
+                            {% assign make-expandable = true %}
+                            {% break %}
+                        {% elsif paragraph.size >= 250 %}
+                            {% assign make-expandable = true %}
+                            {% break %}
+                        {% endif %}
+                    {% endif %}
+                {% endif %}
+            {% endfor %}
+
+            <div class="c-card{% if make-expandable == true and page.title == 'Works' %} c-card__expandable {% endif %}">
 
                 {% if include.title %}
                 <h2 class="c-card__title">{{ include.title }}</h2>
@@ -88,35 +91,17 @@
                 </div>
                 {% endif %}
 
-                {% unless include.resume or page.title == "Workshop" %}
-                    {% comment %}
-
+                {% if page.title == 'Works' %}
                     {% for paragraph in include.paragraphs %}
-                        {% if include.paragraphs.size == 1 %}
-                            <p class="c-card__description">{{ paragraph | truncate: 200 }}</p>
-                            {% if paragraph.size >= 200 %}
-                                <a href="#!">Read more...</a>
-                                {% break %}
-                            {% endif %}
-                        {% elsif forloop.index == 3 %}
-                            <a href="#!">Read more...</a>
-                            {% break %}
-                        {% else %}
-                            {% if forloop.index >= 1 %}
-                                <p class="c-card__description">{{ paragraph | truncate: 200 }}</p>
-                                {% if paragraph.size >= 200 %}
-                                    <a href="#!">Read more...</a>
-                                    {% break %}
-                                {% endif %}
-                            {% endif %}
-                        {% endif %}
-                    {% endfor %}
-                    {% endcomment %}
-
                     <p class="c-card__description">{{ paragraph }}</p>
-                {% endunless %}
 
-                {% if include.resume or page.title == "Workshop" %}
+                    {% endfor %}
+                    {% if make-expandable == true %}
+                    <p class="c-card__read-more">
+                        <a href="#!" class="c-card__read-link js-expand">Read more...</a>
+                    </p>
+                    {% endif %}
+                {% else %}
                     {% for paragraph in include.paragraphs %}
                         <p class="c-card__description">{{ paragraph }}</p>
                     {% endfor %}
@@ -143,19 +128,16 @@
                 {% endfor %}
             </ul>
             {% endif %}
-
-
     </div>
 
+    {% comment %}
+    	text / content > about
+    {% endcomment %}
     {% if include.resume %}
-
         {% include molecules.resume.html
-
             resume-title=include.resume-title
             resume=include.resume
-
         %}
-
     {% endif %}
 
 
