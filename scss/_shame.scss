@@ -41,3 +41,67 @@ Hacks and quick fixes
         }
     }
 }
+
+.u-clickable {
+    cursor: pointer;
+}
+
+.u-overflow-hidden {
+    overflow: hidden;
+}
+
+.u-overlay {
+    display: none;
+    position: fixed;
+    background: rgba(palette(color-background,dark), .85);
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    z-index: 6;
+}
+
+.u-zoom {
+    position: fixed;
+    width: 95%;
+    height: 95%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    z-index: 7;
+
+    ~ .u-overlay {
+        display: block;
+    }
+}
+
+.u-close {
+    z-index: 7;
+    display: block;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 50%;
+    text-align: center;
+
+    background: palette(color-background,light);
+    padding: .5rem 1rem;
+    box-shadow: 3px 0px 4px 1px palette(color-background, dark);
+    opacity: .3;
+    transition: all .2s ease;
+
+    @include text-dimensions($ms-2, $small-line-height, $small-margin-bottom);
+
+    &:hover,
+    &:active {
+        opacity: .75;
+    }
+}
+
+.u-pos-unset {
+    position: unset;
+}

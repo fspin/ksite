@@ -30,9 +30,8 @@
     outline: none;
     line-height: normal;
 
-    & + .c-input-label__underline {
+    + .c-input-label__underline {
         position: absolute;
-        top: -30px;
         height: calc(100% + 1.7rem);
         top: -1.7rem;
 
@@ -42,7 +41,7 @@
         }
 
         &:before {
-            content: "";
+            content: '';
             position: absolute;
             overflow: hidden;
 
@@ -51,13 +50,13 @@
             height: 100%;
             border-bottom: $border-width $border-style palette(color-alpha);
 
-            transition: width $animation-duration-beta $animation-easing-alpha;
+            transition: width $animation-duration-alpha $animation-easing-alpha;
         }
     }
 
     &:focus,
     &:active {
-        & + .c-input-label__underline {
+        + .c-input-label__underline {
             &:before {
                 width: 100%;
             }

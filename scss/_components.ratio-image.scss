@@ -10,7 +10,7 @@
     padding-bottom: 60%;
     height: 0;
     margin-bottom: 10px;
-    // border: 7px solid #fff;
+    overflow: hidden;
 }
 
     .c-ratio-image {
@@ -24,4 +24,5 @@
         background: #fff;
         background-size: cover;
         background-position: center;
+
     }

@@ -105,7 +105,6 @@
         text-decoration: none;
         font-weight: $alpha-font-weight;
 
-        background: palette(color-background,x-light);
         background: linear-gradient(to top, palette(color-background,light) 50%, palette(color-background, x-light) 50%);
 
         background-size: 100% 200%;
@@ -134,7 +133,6 @@
         }
 
         .c-home & {
-            background: palette(color-background, light);
             background: linear-gradient(to bottom, palette(color-background) 50%, palette(color-background, light) 50%);
             background-size: 100% 200%;
             background-position: left bottom;
@@ -167,7 +165,6 @@
 
 
     .c-nav-sub__link {
-        background: palette(color-background,x-light);
         background: linear-gradient(to top, palette(color-background) 50%, palette(color-background, light) 50%);
         background-size: 100% 200%;
         background-position: left top;

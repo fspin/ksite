@@ -21,14 +21,17 @@
 
                 {% if include.images %}
 
-                <div class="c-ratio__wrapper">
+                <div class="c-ratio__wrapper js-zoom">
                     {% include atom.image-ratio.html
 
                         image=first-image
                         title=include.title
                         aria-label=include.title
+                        class='js-image u-clickable'
 
                     %}
+
+                    <div class="u-overlay"></div>
                 </div>
                 {% endif %}
             {% endunless %}
@@ -114,7 +117,7 @@
 
                 {% for image in include.images limit:6 %}
                     <li class="o-list__item c-thumbnail">
-                        <div class="c-thumbnail__wrapper">
+                        <div class="c-thumbnail__wrapper js-thumbnail" data-image="{% increment counter %}">
 
                             {% include atom.image-ratio.html
 
