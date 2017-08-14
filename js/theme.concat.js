@@ -1,3 +1,15 @@
+// Polyfill NodeList.forEach
+(function (){
+    if (window.NodeList && !NodeList.prototype.forEach) {
+        NodeList.prototype.forEach = function (callback, thisArg) {
+            thisArg = thisArg || window;
+            for (var i = 0; i < this.length; i++) {
+                callback.call(thisArg, this[i], i, this);
+            }
+        };
+    }
+})();
+
 var chopstick =
 {
     // init, something like a constructor
@@ -170,22 +182,28 @@ chopstick.mobileNav =
     }
 }());
 
-(function() {
+'use strict';
+
+(function () {
     function changeImage(e) {
         // check clicked image
-        const thumbnail = e.target.style.backgroundImage;
-        const bigImage = document.querySelector(`.js-image[data-title="${e.target.title}"]`)
+        var thumbnail = e.target.style.backgroundImage;
+        var bigImage = document.querySelector('.js-image[data-title="' + e.target.title + '"]');
         bigImage.style.backgroundImage = thumbnail;
     }
 
-    const thumbnails = document.querySelectorAll('.js-thumbnail');
-    thumbnails.forEach(thumbnail => thumbnail.addEventListener('click', changeImage));
-})();
+    var thumbnails = document.querySelectorAll('.js-thumbnail');
 
-(function() {
+    thumbnails.forEach(function (thumbnail) {
+        return thumbnail.addEventListener('click', changeImage);
+    });
+})();
+'use strict';
+
+(function () {
     function toggleReadMore(e) {
-        const container = e.target.parentElement;
-        const target = container.parentElement;
+        var container = e.target.parentElement;
+        var target = container.parentElement;
 
         target.classList.toggle('is-open');
         container.addEventListener('transitionend', hideReadMore);
@@ -195,46 +213,50 @@ chopstick.mobileNav =
         if (e.propertyName.includes('padding')) e.target.classList.add('is-hidden');
     }
 
-    const readMoreTriggers = document.querySelectorAll('.js-expand');
-    readMoreTriggers.forEach(trigger => trigger.addEventListener('click', toggleReadMore));
-
+    var readMoreTriggers = document.querySelectorAll('.js-expand');
+    readMoreTriggers.forEach(function (trigger) {
+        return trigger.addEventListener('click', toggleReadMore);
+    });
 })();
+'use strict';
 
-(function() {
-        function zoom(e) {
-            const image = e.target;
-            const parent = image.parentElement;
-            const body = document.body;
+(function () {
+    function zoom(e) {
+        var image = e.target;
+        var parent = image.parentElement;
+        var body = document.body;
 
-            if (image.classList.contains('u-zoom')) {
-                removeCloseButton(image);
-            } else {
-                addCloseButton(image);
-            }
-
-            image.classList.toggle('u-zoom');
-            parent.classList.toggle('u-pos-unset');
-            body.classList.toggle('u-overflow-hidden');
-
+        if (image.classList.contains('u-zoom')) {
+            removeCloseButton(image);
+        } else {
+            addCloseButton(image);
         }
 
-        function addCloseButton(image) {
-            image.innerHTML = `<span class="u-close js-close">Click anywhere to close</span>`;
-            document.querySelector('.js-close').addEventListener('click', close);
-        }
+        image.classList.toggle('u-zoom');
+        parent.classList.toggle('u-pos-unset');
+        body.classList.toggle('u-overflow-hidden');
+    }
 
-        function removeCloseButton(image) {
-            image.innerHTML = '';
-        }
+    function addCloseButton(image) {
+        image.innerHTML = '<span class="u-close js-close">Click anywhere to close</span>';
+        document.querySelector('.js-close').addEventListener('click', close);
+    }
 
-        function close(e) {
-            e.stopPropagation();
-            e.target.parentElement.click();
-        }
+    function removeCloseButton(image) {
+        image.innerHTML = '';
+    }
 
-        const bigPictures = document.querySelectorAll('.js-image');
-        bigPictures.forEach(picture => picture.addEventListener('click', zoom));
+    function close(e) {
+        e.stopPropagation();
+        e.target.parentElement.click();
+    }
+
+    var bigPictures = document.querySelectorAll('.js-image');
+    bigPictures.forEach(function (picture) {
+        return picture.addEventListener('click', zoom);
+    });
 })();
+//# sourceMappingURL=es2015.concat.js.map
 
 $(chopstick.init);
 

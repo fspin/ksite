@@ -10,9 +10,12 @@
   "main": "gulpfile.js",
   "devDependencies": {
     "autoprefixer": "6.7.7",
+    "babel-core": "^6.25.0",
+    "babel-preset-env": "^1.6.0",
     "browser-sync": "2.18.8",
     "del": "^2.2.1",
     "gulp": "3.9.1",
+    "gulp-babel": "^7.0.0",
     "gulp-cheerio": "^0.6.2",
     "gulp-concat": "2.6.1",
     "gulp-filesize": "0.0.6",
@@ -21,7 +24,7 @@
     "gulp-plumber": "1.1.0",
     "gulp-postcss": "6.4.0",
     "gulp-rename": "^1.2.2",
-    "gulp-sass": "3.1.0",
+    "gulp-sass": "^3.1.0",
     "gulp-scss-lint": "0.4.0",
     "gulp-sourcemaps": "2.6.0",
     "gulp-svg-symbols": "^2.0.0",
@@ -31,9 +34,10 @@
     "run-sequence": "^1.2.2"
   },
   "dependencies": {
+    "babel-polyfill": "^6.23.0",
+    "barba.js": "^1.0.0",
     "chopstick-sass": "^1.0.1",
     "jquery": "^3.2.1",
-    "svgxuse": "^1.2.4",
-    "barba.js": "^1.0.0"
+    "svgxuse": "^1.2.4"
   }
 }

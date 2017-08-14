@@ -7,5 +7,6 @@
     }
 
     const thumbnails = document.querySelectorAll('.js-thumbnail');
+
     thumbnails.forEach(thumbnail => thumbnail.addEventListener('click', changeImage));
 })();
