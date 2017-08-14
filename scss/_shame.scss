@@ -3,6 +3,71 @@ Shame
 ---
 Hacks and quick fixes
 */
+// li {
+//     float: left;
+//     width: 33.3%;
+//     padding: 0;
+//     margin: 0;
+//     background-color: #000;
+//     border: 10px solid #fff;
+//     -moz-box-sizing: border-box;
+//     box-sizing: border-box;
+// }
+
+.c-ratio-aspect .c-ratio-aspect__link {
+    position: relative;
+    height: 0;
+    padding-top: 56.25%;
+
+    &.u-pos-unset {
+        position: unset;
+    }
+}
+
+    .c-ratio-aspect__link {
+        display: block;
+        width: 100%;
+        overflow: hidden;
+    }
+
+.c-ratio-aspect .c-ratio-aspect__img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    // transform: translate(-50%,-50%);
+}
+
+    .c-ratio-aspect__img {
+        display: block;
+        // max-width: 100%;
+        // max-height: 100%;
+        margin: auto;
+        transition: transform .5s ease-out;
+        transform: translate(-50%,-50%);
+        transform-origin: top left;
+
+        &:hover,
+        &:active {
+            transform: translate(-50%,-50%);
+        }
+
+        &.u-zoom {
+            position: fixed;
+            max-width: 90%;
+            max-height: 90%;
+            z-index: 7;
+            transform: translate(-50%,-50%);
+
+            border: 1rem solid white;
+            // border-bottom: 60px solid white;
+
+            &:hover,
+            &:active {
+                transform: translate(-50%,-50%);
+            }
+        }
+    }
+//
 
 .u-max-w-650 {
     width: 100%;
@@ -51,7 +116,7 @@ Hacks and quick fixes
 }
 
 .u-overlay {
-    display: none;
+    display: block;
     position: fixed;
     background: rgba(palette(color-background,dark), .85);
     width: 100vw;
@@ -61,31 +126,32 @@ Hacks and quick fixes
     z-index: 6;
 }
 
-.u-zoom {
-    position: fixed;
-    width: 95%;
-    height: 95%;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-color: transparent;
-    z-index: 7;
-
-    ~ .u-overlay {
-        display: block;
-    }
-}
+// .u-zoom {
+//     position: fixed;
+//     width: 95%;
+//     height: 95%;
+//     left: 50%;
+//     top: 50%;
+//     transform: translate(-50%, -50%);
+//     background-size: contain;
+//     background-repeat: no-repeat;
+//     background-color: transparent;
+//     z-index: 7;
+//
+//     ~ .u-overlay {
+//         display: block;
+//     }
+// }
 
 .u-close {
     z-index: 7;
     display: block;
-    position: absolute;
-    top: 10%;
+    position: fixed;
+    // top: 10%;
+    bottom: 2rem;
     left: 50%;
     transform: translateX(-50%);
-    min-width: 50%;
+    // min-width: 50%;
     text-align: center;
 
     background: palette(color-background,light);
@@ -100,8 +166,4 @@ Hacks and quick fixes
     &:active {
         opacity: .75;
     }
-}
-
-.u-pos-unset {
-    position: unset;
 }

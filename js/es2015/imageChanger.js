@@ -1,11 +1,10 @@
 (function() {
     function changeImage(e) {
-        // check clicked image
         const thumbnail = e.target.style.backgroundImage;
+        const url = thumbnail.match(/(?:\(['"]?)(.*?)(?:['"]?\))/)[1].replace(/('|")/g,'');
         const bigImage = document.querySelector(`.js-image[data-title="${e.target.title}"]`)
-        bigImage.style.backgroundImage = thumbnail;
+        bigImage.src = url;
     }
-
     const thumbnails = document.querySelectorAll('.js-thumbnail');
 
     thumbnails.forEach(thumbnail => thumbnail.addEventListener('click', changeImage));

@@ -2,12 +2,11 @@
 
 (function () {
     function changeImage(e) {
-        // check clicked image
         var thumbnail = e.target.style.backgroundImage;
+        var url = thumbnail.match(/(?:\(['"]?)(.*?)(?:['"]?\))/)[1].replace(/('|")/g, '');
         var bigImage = document.querySelector('.js-image[data-title="' + e.target.title + '"]');
-        bigImage.style.backgroundImage = thumbnail;
+        bigImage.src = url;
     }
-
     var thumbnails = document.querySelectorAll('.js-thumbnail');
 
     thumbnails.forEach(function (thumbnail) {
@@ -39,37 +38,29 @@
 (function () {
     function zoom(e) {
         var image = e.target;
-        var parent = image.parentElement;
+        var overlay = image.parentElement.nextElementSibling;
         var body = document.body;
-
-        if (image.classList.contains('u-zoom')) {
-            removeCloseButton(image);
-        } else {
-            addCloseButton(image);
-        }
+        var closeButton = e.target.nextElementSibling;
 
         image.classList.toggle('u-zoom');
-        parent.classList.toggle('u-pos-unset');
         body.classList.toggle('u-overflow-hidden');
-    }
-
-    function addCloseButton(image) {
-        image.innerHTML = '<span class="u-close js-close">Click anywhere to close</span>';
-        document.querySelector('.js-close').addEventListener('click', close);
-    }
-
-    function removeCloseButton(image) {
-        image.innerHTML = '';
+        closeButton.classList.toggle('is-hidden');
+        overlay.classList.toggle('is-hidden');
     }
 
     function close(e) {
         e.stopPropagation();
-        e.target.parentElement.click();
+        document.querySelector('.js-image.u-zoom').click();
     }
 
     var bigPictures = document.querySelectorAll('.js-image');
+    var closeButtons = document.querySelectorAll('.js-close');
+
     bigPictures.forEach(function (picture) {
         return picture.addEventListener('click', zoom);
+    });
+    closeButtons.forEach(function (picture) {
+        return picture.addEventListener('click', close);
     });
 })();
 //# sourceMappingURL=es2015.concat.js.map

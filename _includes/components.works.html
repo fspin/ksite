@@ -18,6 +18,18 @@
 
             {% unless include.resume %}
                 {% capture first-image %}{{ include.images | first }}{% endcapture %}
+                <div class="c-ratio-aspect js-zoom">
+                    <a href="#!" class="c-ratio-aspect__link">
+                        <figure>
+                            <img src="{{ site.github.url }}/img/jpg/{{ first-image }}" alt="" class="c-ratio-aspect__img js-image" data-title="{{ include.title }}">
+                            <figcaption class="u-close js-close is-hidden">Click anywhere to close</figcaption>
+                        </figure>
+                        <div class="u-overlay js-close is-hidden"></div>
+                    </a>
+                </div>
+
+            {% comment %}
+                {% capture first-image %}{{ include.images | first }}{% endcapture %}
 
                 {% if include.images %}
 
@@ -34,6 +46,7 @@
                     <div class="u-overlay"></div>
                 </div>
                 {% endif %}
+                {% endcomment %}
             {% endunless %}
 
             {% if include.resume %}
