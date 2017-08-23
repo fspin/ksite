@@ -7,7 +7,6 @@
 
 # Meta data
 url: "https://f-spin.net/k" # the base hostname & protocol for your site
-# baseurl: "k"              # the subpath of your site, e.g. /blog/
 title: 'Kenta Takeshige'
 author: ''
 description:

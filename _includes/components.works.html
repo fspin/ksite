@@ -21,7 +21,7 @@
                 <div class="c-ratio-aspect js-zoom">
                     <a href="#!" class="c-ratio-aspect__link">
                         <figure>
-                            <img src="{{ site.github.url }}/img/jpg/{{ first-image }}" alt="" class="c-ratio-aspect__img js-image" data-title="{{ include.title }}">
+                            <img src="{{ site.url }}/img/jpg/{{ first-image }}" alt="" class="c-ratio-aspect__img js-image" data-title="{{ include.title }}">
                             <figcaption class="u-close js-close is-hidden">Click anywhere to close</figcaption>
                         </figure>
                         <div class="u-overlay js-close is-hidden"></div>
@@ -51,7 +51,7 @@
 
             {% if include.resume %}
                 <p class="o-media">
-                    <img src="{{ site.github.url }}/img/jpg/{{ include.images | first }}" alt="{{ include.title }}, {{ include.year }}" class="o-media--img{% if include.resume %} u-max-w-650{% endif %}">
+                    <img src="{{ site.url }}/img/jpg/{{ include.images | first }}" alt="{{ include.title }}, {{ include.year }}" class="o-media--img{% if include.resume %} u-max-w-650{% endif %}">
                 </p>
             {% endif %}
 
