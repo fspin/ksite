@@ -6,7 +6,8 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Meta data
-url: "https://f-spin.net/k" # the base hostname & protocol for your site
+url: ""
+# url: "https://f-spin.net/k" # the base hostname & protocol for your site
 title: 'Kenta Takeshige'
 author: ''
 description:
@@ -31,6 +32,15 @@ navigation:
         suburl: workshop-hand-tools/
       - subtitle: Finishing-Techniques
         suburl: workshop-finishing-techniques/
+  - title: Shop
+    url: shop/
+    subpaginas:
+      - subtitle: Eastern
+        suburl: shop-eastern/
+      - subtitle: Western
+        suburl: shop-western/
+  - title: News
+    url: news/
   - title: Contact
     url: contact/
 
