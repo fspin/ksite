@@ -1,0 +1,33 @@
+---
+layout: default
+title: Shop
+sub-page: Western
+section: portfolio
+---
+{% assign creation = site.data.works.creation | reverse %}
+
+<main class="c-row c-row--zero c-row--portfolio">
+    <div class="o-container">
+
+        {% comment %}
+
+        {% for work in creation limit:3 %}
+
+        {% capture thecycle %}{% cycle 'odd', 'even' %}{% endcapture %}
+
+            {%
+               include components.works.html
+
+               title=work.title
+               material=work.material
+               year=work.year
+               paragraphs=work.paragraphs
+               images=work.images
+            %}
+        {% endfor %}
+
+        {% endcomment %}
+        {% include components.pagination.html %}
+
+    </div>
+</main>

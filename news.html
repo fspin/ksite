@@ -1,0 +1,29 @@
+---
+layout: default
+title: News
+section: news
+---
+
+<main class="c-row c-row--zero c-row--portfolio">
+    <div class="o-container">
+{% comment %}
+        {% for item in site.data.about %}
+
+        {% assign thecycle = 'even' %}
+
+            {%
+               include components.works.html
+
+               paragraphs=item.paragraphs
+               images=item.images
+               resume-title=item.resume-title
+               resume=item.resume
+               class-flex-start='o-flex--align-self-start'
+
+            %}
+        {% endfor %}
+        {% endcomment %}
+
+
+    </div>
+</main>
