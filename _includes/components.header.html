@@ -1,6 +1,6 @@
 <div class="js-nav-holder c-row c-row--zero">
     <div class="o-container">
-        <div class="c-header o-flex o-flex--wrap{% if page.section == 'home' %} c-header--home o-flex--justify-end{% else %} o-flex--justify-space-between{% endif %}">
+        <div class="c-header o-flex o-flex--wrap o-flex--justify-end{% if page.section == 'home' %} c-header--home{% endif %}">
             {% if page.section != 'home' %}
                 {% include components.logo.html %}
             {% endif %}

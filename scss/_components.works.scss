@@ -1,9 +1,10 @@
 .c-work {
     background-color: palette(color-background);
     position: relative;
+    @include padding-tb(6,2);
 
-    @include mq(bp3) {
-        @include padding-tb(6,2);
+    @include mq(bp4, max) {
+        @include padding-tb(2,2);
 
         & + & {
             @include padding-tb(4,2);
@@ -19,6 +20,23 @@
         width: 60%;
 
         border-top: 1px dashed  palette(color-background, dark);
+    }
+}
+
+.c-work--conditions {
+    // margin: 0 auto;
+
+    .c-work__title {
+        @include margin-top(1.5);
+    }
+
+    .c-work__description {
+        @include margin-bottom(.75);
+        font-family: $beta-font-family;
+    }
+
+    @include mq(bp5, max) {
+        @include padding-tb(1.5,2);
     }
 }
 
@@ -168,8 +186,9 @@
         }
 
         &.c-work__text-resume {
-            width: 100%;
+            // width: 66%;
             order: 5;
+            margin: 2rem auto;
         }
     }
 

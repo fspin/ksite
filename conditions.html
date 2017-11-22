@@ -1,0 +1,41 @@
+---
+layout: default
+title: About
+section: about
+---
+
+<main class="c-row c-row--zero c-row--portfolio">
+    <div class="o-container">
+
+        {% for item in site.data.conditions %}
+
+
+            <section class="c-work c-work--conditions o-flex o-flex--wrap o-flex--align-center">
+
+                <div class="c-work__text c-work__text-left c-work__text-conditions u-2-of-2 u-2-of-3-bp4 u-align-horizontal">
+                    <div class="c-card">
+                        <h3 class="c-card__title">{{ item.conditions-title | capitalize }}</h3>
+                        <p>{{ item.text }}</p>
+
+                        {% for article in item.articles %}
+                            <h5 class="c-work__title">{{ article.article }}</h5>
+                            {% for p in article.paragraphs %}
+                                <p class="c-work__description">{{ p | raw }}</p>
+                            {% endfor %}
+                        {% endfor %}
+                        <!-- <dl class="c-def-list">
+                            {% for item in include.resume %}
+                                <dt class="c-def-list__title">{{ item.year }}</dt>
+                                <dd class="c-def-list__description"><h5>{{ item.title }}</h5></dd>
+                                {% if item.description %}
+                                    <dd class="c-def-list__description">{{ item.description }}</dd>
+                                {% endif %}
+                            {% endfor %}
+                        </dl> -->
+                    </div>
+                </div>
+            </section>
+        {% endfor %}
+
+    </div>
+</main>

@@ -6,13 +6,16 @@
 
 {% endcomment %}
 
-<div class="c-work__text c-work__text-left c-work__text-resume">
+<div class="c-work__text c-work__text-left c-work__text-resume u-2-of-2 u-3-of-4-bp5">
     <div class="c-card">
         <h3 class="c-card__title">{{ include.resume-title | capitalize }}</h3>
         <dl class="c-def-list">
             {% for item in include.resume %}
                 <dt class="c-def-list__title">{{ item.year }}</dt>
-                <dd class="c-def-list__description">{{ item.description }}</dd>
+                <dd class="c-def-list__description"><h5>{{ item.title }}</h5></dd>
+                {% if item.description %}
+                    <dd class="c-def-list__description">{{ item.description }}</dd>
+                {% endif %}
             {% endfor %}
         </dl>
     </div>

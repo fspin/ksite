@@ -7,31 +7,38 @@
     - 'I am proud of the traditional handwork I apply. Joinery, shaving, carving and finishing techniques are practiced by hand and hand tools. Well-kept tools become the extension of hands to make the most of the character and beauty of wood.'
     - 'The final goal of woodworking is to create a lifelong companion. The result shows the good works of a craftsman. I am doing woodworking to reach good results by using eastern and western knowledge and techniques.'
   resume:
-    - year: 1978
-      description: 'Born in Osaka, Japan'
-    - year: 2001
-      description: 'Graduated from Kansai University, Faculty of Literature'
-    - year: 2003
-      description: 'Graduated from Nagano Agematsu Technical College, woodworking course'
-    - year: 2003
-      description: 'Training under craftsman Tatsuya Furuse'
-    - year: 2004 - 06
-      description: 'Employed by Japan International Cooperation Agency, dispatched to Botswana as a woodworker'
-    - year: 2007
-      description: 'Royal Academy of Antwerp, Faculty of Conservation and Restoration'
-    - year: 2007
-      description: 'Move to Ghent city'
-    - year: 2008 - 10
-      description: 'Participate in art project SHÔ by Treibgut'
-    - year: 2010 - 13
-      description: 'Work in furniture restoration workshop'
-    - year: 2011 - 15
-      description: 'Enrolled in Puurs Music Instrument Building Center, violin building course'
-    - year: 2012 - 15
-      description: 'Restoration Home'
-    - year: 2013
-      description: 'Move to Evergem'
-    - year: 2015
-      description: 'Study under Urushi artist Tatsuji Ichihara'
-    - year: 2017
-      description: 'Established woodworking workshop Kenta Takeshige'
+    - year: '1978'
+      title: 'Born in Osaka, Japan'
+    - year: '2001'
+      title: 'Graduated from Kansai University, Faculty of Literature'
+      description: 'I took a gap year from university to live in Quebec in Canada. From there, I made excursions to France for my dissertation. While I was in France, I met an antique restorer which had a huge impact on me.'
+    - year: '2003'
+      title: 'Graduated from Nagano Agematsu Technical College, woodworking course'
+      description: 'I entered Technical School located in Kiso, one of the most renowned places for lacquerware in Japan. My aim to master woodworking was to be able to restore woodworks. I met a senior student who was training to be dispatched to a developing country as a member of the International Cooperation Agency. This inspired me: instead of just traveling, you work and live together with local people, using your specific skills and knowledge to share with different people and countries.'
+    - year: '2003'
+      title: 'Training under craftsman Tatsuya Furuse'
+      description: 'More than just woodworking I got in touch with Tatsuya Furuse’s philosophy: study light and shadow, observe the shapes in nature and copy the line, color and form as accurate as possible to cultivate your own sensibility.'
+    - year: '2004 - 06'
+      title: 'Employed by Japan International Cooperation Agency, dispatched to Botswana as a woodworker'
+      description: 'I was dispatched to Zwenshambe vocational school in Botswana by JICA. It was my work as a woodworking instructor to teach trainees but I also learned a lot there. For instance, I met people who were engaged in monuments’ care in developing countries.'
+    - year: '2007'
+      title: 'Royal Academy of Antwerp, Faculty of Conservation and Restoration'
+      description: 'I entered the Antwerp Academy for one year in order to study conservation and restoration of arts.'
+    - year: '2007'
+      title: 'Move to Ghent'
+    - year: '2008 - 10'
+      title: 'Participate in art project SHÔ by Treibgut'
+    - year: '2010 - 13'
+      title: 'Work in furniture restoration workshop'
+    - year: '2011 - 15'
+      title: 'Enrolled in Puurs Music Instrument Building Center, violin making course'
+      description: 'I fulfilled my dream of working in a furniture restoration workshop and gathering experience. To improve my skills, I learned to make violins in this music instrument building center.'
+    - year: '2012 - 15'
+      title: 'Restoration Home'
+      description: 'We bought an old farm house in a terrible condition in Evergem, 8km north of Ghent and turned it into a thorough renovation project.'
+    - year: '2015'
+      title: 'Study under woodcarver and Urushi artist Tatsuji Ichihara'
+      description: 'Japanese supreme art; japan (Urushi). I studied Suri Urushi, one of the finishing techniques, under master Ichihara in Japan.'
+    - year: '2017'
+      title: 'Established woodworking workshop Kenta Takeshige'
+      description: 'I do not just like old things. I care about heritages and worry about old techniques: both are now disappearing rapidly instead of being conserved for future generations. This is the main reason why I am passionate about my work.'

@@ -39,7 +39,7 @@
                 width: 100%;
                 position: absolute;
                 left: 0;
-                height: 50%;
+                // height: 50%;
                 z-index: -2;
             }
 
@@ -114,7 +114,8 @@
         @include text-dimensions($alpha-font-size,1,0,.25,.25);
 
         @include padding-lr(.75,.75);
-        @include padding-tb(.5,.5);
+        // @include padding-lr(.35,.35);
+        @include padding-tb(.75,.75);
 
         @include mq(bp3) {
             @include padding-tb(1.75,1.75);
