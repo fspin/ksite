@@ -20,7 +20,7 @@ section: contact
                    resume=item.resume
                 %}
             {% endcomment %}
-            <section class="c-work o-flex o-flex--wrap o-flex--align-start">
+            <section class="c-work c-work--contact o-flex o-flex--wrap o-flex--align-center">
                 <div class="c-work__form-right u-1-of-2-bp4">
                     <div class="c-card c-card--beta">
                         <form action="#" method="post" class="c-form">
@@ -56,13 +56,11 @@ section: contact
                     </div>
                 </div>
 
-                <div class="c-work__text c-work__text-left u-1-of-2-bp4">
-                    <div class="c-card">
+                <div class="c-work__text c-work__text-left u-1-of-2-bp4 u-mb-epsilon">
+                    <div class="c-card u-align-horizontal">
 
                         <!-- <h2 class="c-card__title"> -->
-                        <h2 class="">
-                            {{ item.contact-title | capitalize }}
-                        </h2>
+
 
                         <div class="">
                             <ul class="o-list">
@@ -72,15 +70,23 @@ section: contact
                             </ul>
                         </div>
 
-                        <ul class="o-list">
+                        <!-- <ul class="o-list"> -->
                             {% for field in item.fields %}
-                                <li class="o-list__item">
-                                    <span class="c-card__description">
-                                        {{ field.type | capitalize }}: {{ field.info }}
-                                    </span>
-                                </li>
+                                <!-- <li class="o-list__item">
+                                </li> -->
+
+                                {% if forloop.last %}
+                                    <p class="u-mt-epsilon">{{ field.type }} {{ field.info }}</p>
+                                {% else %}
+
+                                <dl class="c-def-list c-def-list--beta">
+                                    <dt class="c-def-list__title">{{ field.type | capitalize }}</dt>
+                                    <dd class="c-def-list__description">{{ field.info }}</dd>
+                                </dl>
+
+                                {% endif %}
                             {% endfor %}
-                        </ul>
+                        <!-- </ul> -->
                     </div>
                 </div>
 

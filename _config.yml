@@ -16,32 +16,32 @@ description:
 
 # Site navigation
 navigation:
-  - title: About
+  - title: about
     url: about/
-  - title: Works
+  - title: works
     url: works/
     subpaginas:
-      - subtitle: Creation
+      - subtitle: creation
         suburl: works-creation/
-      - subtitle: Restoration
+      - subtitle: restoration
         suburl: works-restoration/
-  - title: Workshop
+  - title: workshop
     url: workshop/
     subpaginas:
-      - subtitle: Hand-Tools
+      - subtitle: hand-tools
         suburl: workshop-hand-tools/
-      - subtitle: Finishing-Techniques
+      - subtitle: finishing-techniques
         suburl: workshop-finishing-techniques/
-  - title: Shop
+  - title: shop
     url: shop/
     subpaginas:
-      - subtitle: Eastern
+      - subtitle: eastern
         suburl: shop-eastern/
-      - subtitle: Western
+      - subtitle: western
         suburl: shop-western/
-  - title: News
+  - title: news
     url: news/
-  - title: Contact
+  - title: contact
     url: contact/
 
 # Jekyll settings

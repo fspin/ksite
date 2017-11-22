@@ -3,47 +3,72 @@
     ---
     The style of definition lists
 */
-
 .c-def-list {
     @include margin-tb(2,2);
     padding: 0;
 }
 
-.c-def-list__title {
-    font-family: $mono-font-family;
-    color: palette(color-gamma);
+    .c-def-list__title {
+        font-family: $mono-font-family;
+        color: palette(color-gamma);
 
-    @include text-dimensions($ms1);
-    @include padding-top(.75);
+        // @include text-dimensions($ms1);
+        @include padding-top(.75);
 
-    @include mq(bp3) {
-        left: 0;
-        top: 1.25rem;
-        width: 6.5rem;
-        text-align: right;
-        line-height: 1rem;
-        position: relative;
+        @include mq(bp3) {
+            left: 0;
+            top: 1.25rem;
+            width: 6.5rem;
+            text-align: right;
+            line-height: 1rem;
+            position: relative;
+        }
+
+        &:first-child {
+            @include padding-top(0);
+        }
     }
 
-    &:first-child {
-        @include padding-top(0);
-    }
-}
+    .c-def-list__description {
+        max-width: 36rem;
 
-.c-def-list__description {
-    max-width: 36rem;
+        @include padding-left(0);
+        @include margin-bottom(1);
 
-    @include padding-left(0);
-    @include margin-bottom(1);
-
-    @include mq(bp3) {
-        @include padding-left(1);
-        @include margin-left(7.75);
-        @include padding-bottom(0);
-        border-left: 1px solid palette(color-background, dark);
+        @include mq(bp3) {
+            @include padding-left(1);
+            @include margin-left(7.75);
+            @include padding-bottom(0);
+            border-left: 1px solid palette(color-background, dark);
+        }
     }
 
-    // & + & {
-    //     @include padding-bottom(1);
-    // }
+.c-def-list--beta {
+    margin: .5rem auto .75rem;
+    line-height: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    .c-def-list__title {
+        position: unset;
+        text-transform: uppercase;
+        font-size: .8rem;
+        letter-spacing: .075rem;
+        font-family: $alpha-font-family; // marcellus
+        width: auto;
+
+        @include mq(bp4) {
+            text-align: left;
+            width: 4.5rem;
+        }
+
+    }
+
+    .c-def-list__description {
+        border-left: 0;
+        // font-family: $beta-font-family; // marcellus
+        margin: 0;
+        padding-left: .5rem;
+    }
 }

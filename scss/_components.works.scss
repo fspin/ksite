@@ -40,6 +40,10 @@
     }
 }
 
+.c-work--contact {
+    @include padding-tb(4,4);
+}
+
     .c-work__img-left {
 
         @include mq(bp3, max) {

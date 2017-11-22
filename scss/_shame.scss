@@ -75,7 +75,11 @@ Hacks and quick fixes
 }
 
 .c-form {
-    width: 80%;
+    width: 100%;
+
+    @include mq(bp3) {
+        width: 80%;
+    }
 }
 
 .c-form__field {
