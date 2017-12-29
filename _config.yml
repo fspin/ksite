@@ -13,6 +13,7 @@ author: ''
 description:
   - 'Eastern and Western Woodworking'
   - 'Restoration'
+  - 'Asian Antiques and crafts'
 
 # Site navigation
 navigation:
@@ -28,9 +29,9 @@ navigation:
   - title: workshop
     url: workshop/
     subpaginas:
-      - subtitle: hand-tools
+      - subtitle: hand tools
         suburl: workshop-hand-tools/
-      - subtitle: finishing-techniques
+      - subtitle: finishing techniques
         suburl: workshop-finishing-techniques/
   - title: shop
     url: shop/
@@ -43,6 +44,10 @@ navigation:
     url: news/
   - title: contact
     url: contact/
+
+footer-navigation:
+  - title: general conditions
+    url: conditions/
 
 # Jekyll settings
 permalink: pretty

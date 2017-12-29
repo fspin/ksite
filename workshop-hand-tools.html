@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Workshop
-sub-page: Hand-Tools
+title: workshop
+sub-page: hand tools
 section: portfolio
 ---
 {% assign hand-tools = site.data.workshop.hand-tools | reverse %}
@@ -13,8 +13,7 @@ section: portfolio
 {% endcomment %}
 <main class="c-row c-row--zero c-row--portfolio">
     <div class="o-container">
-
-        {% for work in hand-tools limit:3 %}
+        {% for work in hand-tools reversed limit:3 %}
         {% capture thecycle %}{% cycle 'odd', 'even' %}{% endcapture %}
 
             {%

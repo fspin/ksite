@@ -37,8 +37,11 @@
         {% endfor %}
     </ul>
 
+
+
+
     {% for item in site.navigation %}
-        {% if item.subpaginas and page.title == item.title %}
+        {% if item.subpaginas and page.title | downcase == item.title | downcase %}
             {% if page.title == item.title %}
             <div class="c-nav-subnav is-hidden-until-bp3">
                 <ul class="o-list c-nav-main__list c-nav-sub__list">

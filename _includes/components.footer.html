@@ -1,20 +1,31 @@
 <footer class="c-row c-row--zero">
     <div class="o-container">
         <section class="c-footer o-flex o-flex--wrap">
-
-            <i class="c-logo c-logo--centered c-logo c-footer__logo"></i>
-
-            <p class="c-footer__title o-flex o-flex--vertical o-flex--justify-center">
-                {{ site.title }} <br>
-                <span class="c-footer__tagline">
-                    {% for line in site.description %}
-                        {{ line }}.
+            <a href="{{ site.url }}/" class="c-logo__link c-logo__link-footer">
+                <i class="c-logo c-logo--centered c-logo c-footer__logo"></i>
+                <p class="c-footer__title o-flex o-flex--vertical o-flex--justify-center">
+                    {{ site.title }} <br>
+                    <span class="c-footer__tagline">
+                        {% for line in site.description %}
+                            {{ line }} <br>
+                        {% endfor %}
+                    </span>
+                </p>
+            </a>
+            <nav class="c-footer__nav o-flex o-flex--align-center o-flex--justify-end">
+                <ul class="o-list o-flex o-flex--wrap o-flex--justify-center">
+                    {% for item in site.navigation %}
+                    <li>
+                        <a href="{{ site.url }}/{{ item.url }}" class="c-footer__nav-link">{{ item.title | downcase }}</a>
+                    </li>
                     {% endfor %}
-                </span>
-            </p>
+                    {% for item in site.footer-navigation %}
+                    <li>
+                        <a href="{{ site.url }}/{{ item.url }}" class="c-footer__nav-link">{{ item.title | downcase }}</a>
+                    </li>
+                    {% endfor %}
+                {% comment %}
 
-            <nav class="c-footer__nav o-flex o-flex--align-center">
-                <ul class="o-list">
                 {% for item in site.navigation %}
 
 
@@ -35,7 +46,8 @@
                         {% endif %}
 
                 {% endfor %}
-                </ul>
+                {% endcomment %}
+            </ul>
             </nav>
         </section>
     </div>

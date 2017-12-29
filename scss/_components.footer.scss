@@ -26,33 +26,44 @@
 
     .c-footer__tagline {
         font-family: $gamma-font-family;
-        @include text-dimensions($ms-1,1);
+
+        @include margin-top(.5);
+        @include text-dimensions($ms-1,.75);
     }
 
 .c-footer__nav {
     flex: 1 auto;
 
-    @include margin-lr(1,0);
+    // @include margin-lr(1,0);
+
     @include mq(bp3) {
-        justify-content: center;
+        // justify-content: center;
     }
 
     .o-list {
         @include margin-bottom(0);
     }
 
-    a {
-        color: palette(color-background);
+    .c-footer__nav-link {
+        display: block;
+        // font-size: .75rem;
+
+        // border-bottom: 1px dashed transparent;
+        color: palette(color-neutral);
+
+        @include padding-tb(.75);
+        @include margin-lr(.75);
 
         &:visited {
-            color: palette(color-background, dark);
+            color: palette(color-neutral);
         }
 
         &:hover {
             text-decoration: $link-decoration;
             color: palette(color-background, x-light);
-            border-bottom: 1px dashed palette(color-neutral,dark);
+            // border-bottom: 1px dashed palette(color-neutral,dark);
         }
     }
+
 
 }
