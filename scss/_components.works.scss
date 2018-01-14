@@ -25,6 +25,8 @@
 
 .c-work--conditions {
     // margin: 0 auto;
+    min-height: calc(100vh - 163px - 90px);
+    height: auto;
 
     .c-work__title {
         @include margin-top(1.5);
@@ -42,6 +44,8 @@
 
 .c-work--contact {
     @include padding-tb(4,4);
+    min-height: calc(100vh - 163px - 90px);
+    height: auto;
 }
 
     .c-work__img-left {

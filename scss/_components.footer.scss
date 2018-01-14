@@ -9,6 +9,9 @@
 
     @include padding-tb($alpha-leading, $alpha-leading);
     @include padding-lr($alpha-leading);
+
+    min-height: 163px;
+    height: auto;
 }
 
 .c-footer__logo {

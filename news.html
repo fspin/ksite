@@ -6,24 +6,20 @@ section: news
 
 <main class="c-row c-row--zero c-row--portfolio">
     <div class="o-container">
-{% comment %}
-        {% for item in site.data.about %}
 
-        {% assign thecycle = 'even' %}
+        {% for item in site.data.conditions %}
 
-            {%
-               include components.works.html
 
-               paragraphs=item.paragraphs
-               images=item.images
-               resume-title=item.resume-title
-               resume=item.resume
-               class-flex-start='o-flex--align-self-start'
+            <section class="c-work c-work--conditions o-flex o-flex--wrap o-flex--align-center">
 
-            %}
+                <div class="c-work__text c-work__text-left c-work__text-conditions u-2-of-2 u-2-of-3-bp4 u-align-horizontal">
+                    <div class="c-card">
+                        <h3 class="c-card__title">Blogpost</h3>
+
+                    </div>
+                </div>
+            </section>
         {% endfor %}
-        {% endcomment %}
-
 
     </div>
 </main>
